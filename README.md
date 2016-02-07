@@ -24,9 +24,16 @@ As apresentações semanais poderão ser acessadas a partir dos links abaixo:
 
 ## Tarefas
 
+### Listagem das tarefas
+
 As tarefas dos estagiários estão presentes nas [Issues do projeto](https://github.com/diego91964/estagio-cti/issues)
+
+### Exercícios
+
+Os exercícios deverão ser implementados em forma de testes unitários na pasta de códgio fonte.
 
 ## Códgio Fonte
 
-O código fonte criado será armazenado no seguinte endereço
+O código fonte criado será armazenado no seguinte endereço : 
 
+https://github.com/diego91964/estagio-cti/tree/master/codigo/estagio
