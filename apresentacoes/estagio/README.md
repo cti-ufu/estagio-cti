@@ -1,8 +1,3 @@
-Apresentação dos planos de 2016
-====================================
-
-Apresentação dos planos do UaiJUG realizada em (19-01-2016)
-
 Executando o projeto localmente
 -------------------------------
 
