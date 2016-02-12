@@ -42,10 +42,6 @@
 				<section class="include" data-include="caps/1/1-slide.html"></section>
 				<section class="include" data-include="caps/1/2-slide.html"></section>
 				<section class="include" data-include="caps/1/3-slide.html"></section>
-				<section class="include" data-include="caps/1/4-slide.html"></section>
-				<section class="include" data-include="caps/1/5-slide.html"></section>
-				<section class="include" data-include="caps/1/6-slide.html"></section>
-				<section class="include" data-include="caps/1/7-slide.html"></section>
 				<section class="include" data-include="padrao/perguntas.html"></section>
 				<section class="include" data-include="padrao/contatos.html"></section>
 			</div>
