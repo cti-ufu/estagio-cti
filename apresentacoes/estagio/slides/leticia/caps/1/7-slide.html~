@@ -1,0 +1,16 @@
+<h3><font color="#8FBC8F">Método</font></h3>
+<div align="left"><font face="Times">. Conjunto de Instruções.</font></div>
+
+<pre>
+	<code>
+	<font color="green">public</font> class estagiario{
+	<font color="green">void</font> trabalhar(){
+		instrucao1;
+		instrucao2;
+
+	} 
+	}
+	<font color="blue">//instruções</font>
+	</code>
+	</code>
+</pre>

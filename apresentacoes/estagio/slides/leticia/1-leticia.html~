@@ -38,10 +38,26 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				
+				<section class="include" data-include="caps/1/0-slide.html"></section>
 				<section class="include" data-include="caps/1/1-slide.html"></section>
 				<section class="include" data-include="caps/1/2-slide.html"></section>
 				<section class="include" data-include="caps/1/3-slide.html"></section>
+				<section class="include" data-include="caps/1/4-slide.html"></section>
+				<section class="include" data-include="caps/1/5-slide.html"></section>
+				<section class="include" data-include="caps/1/6-slide.html"></section>
+				<section class="include" data-include="caps/1/7-slide.html"></section>
+				<section class="include" data-include="caps/1/8-slide.html"></section>
+				<section class="include" data-include="caps/1/9-slide.html"></section>
+				<section class="include" data-include="caps/1/10-slide.html"></section>
+				<section class="include" data-include="caps/1/11-slide.html"></section>
+				<section class="include" data-include="caps/1/12-slide.html"></section>
+				<section class="include" data-include="caps/1/13-slide.html"></section>
+				<section class="include" data-include="caps/2/1-slide.html"></section>
+				<section class="include" data-include="caps/2/2-slide.html"></section>
+				<section class="include" data-include="caps/2/3-slide.html"></section>
+				<section class="include" data-include="caps/2/4-slide.html"></section>
+				<section class="include" data-include="caps/2/5-slide.html"></section>
+				<section class="include" data-include="caps/2/6-slide.html"></section>
 				<section class="include" data-include="padrao/perguntas.html"></section>
 				<section class="include" data-include="padrao/contatos.html"></section>
 			</div>

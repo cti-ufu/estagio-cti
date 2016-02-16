@@ -3,7 +3,7 @@
 <div align="left"><font face="Times">. Uma classe tem um ou mais métodos.</font></div>
 <pre>
 	<code>
-	<font color="green">public class</font> estagiario{
+	<font color="green">public</font> class estagiario{
 	<font color="green">void</font> trabalhar(){
 
 	} 

@@ -2,7 +2,7 @@
 <div align="left"><font face="Times">.Contém a definição de classe.</font></div>
 <pre>
 	<code>
-	<font color="green">public class</font> estagiario{
+	<font color="green">public</font> class estagiario{
 
 	} 
 	<font color="blue">//classe</font>
