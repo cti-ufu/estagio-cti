@@ -1,0 +1,46 @@
+<h5>Exemplo de Métodos com Parâmetros e Argumentos</h5>
+<pre>
+	<code data-trim data-noescape>
+public class GetSet {
+
+	String nome;
+	int idade;
+	
+	void setNome(String nome) {
+		
+		this.nome = nome;
+	}
+	
+	int getIdade(String nome) {
+		//Como a função deste método é GET (pegar) um valor do objeto escolhido (teste) do tipo INT, então ele deverá retornar o valor, de uma forma ou outra. 
+		//(se tiver condições, tem que ter um retorno em ambas as condições)
+		//Só pode ter 1 Return por vez, podendo ocasionar em erro caso tente fazer mais de uma vez (usar ArrayList para ter mais de um return)
+
+
+		if(nome == this.nome) {
+			return this.idade;
+		}
+		
+		else {
+			
+			return 0;
+		}
+	}
+}
+
+public class GetSetTest {
+	
+	public static void main(String[] args) {
+		
+		GetSet teste = new GetSet();
+		int idade;
+		
+		teste.setNome("Carlos");// Irá enviar um novo valor para o objeto teste, que é o Carlos
+		idade = teste.getIdade("Carlos"); //Irá enviar o argumento Carlos para pegar o respectivo valor do método GET e atribuir ele à variavel idade desta classe
+		//Como este (apenas este) getIdade pede um argumento para funcionar, ele não funcionará sem qualquer argumento definido dentro do parentêses
+
+		int soma = 10 + teste.getIdade(); //Ao invés de colocar o valor do objeto, puxe-o com o GET
+	}
+}
+	</code>
+</pre>
