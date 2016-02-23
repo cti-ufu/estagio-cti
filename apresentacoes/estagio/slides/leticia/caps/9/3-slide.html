@@ -1,0 +1,16 @@
+<div align="left"><h5><font face="Georgia" color="#9F5F9F">2.Variáveis de Instância e Variáveis Locais</font></h5></div>
+<div align="left"><font face="Georgia" size="4,5">. As variáveis de instância são declaradas dentro de uma <i>classe</i>, mas <i>não</i> dentro de um método.As variáveis d e instância residem dentro do objeto a que pertencem.</div>
+<div align="left">. As variáveis locais são declaradas dentro de um método, inclusice como parâmetro do método. Elas são temporárias e só existem enquanto o método está na pilha.</div></font>
+<font face="Times" size="6">
+<pre>
+	<code>
+	public void foo(int x){
+		int i= x + 3;
+		boolean b = true;
+	}	<font color="blue">// O parâmentro x e as variáveis i e b são
+			 todos variáveis locais.</font>
+	</code>
+</pre>
+</font>
+<div align="left"><font face="Georgia" size="4,5">.Os métodos são empilhados, ou seja, quando um método for chamado, ele será inserido no topo de uma pilha de chamadas.</div>
+<div align="left">.Todas as variáveis locais residem na pilha, no ponteiro correspondente ao método onde foram declaradas.</div></font>
