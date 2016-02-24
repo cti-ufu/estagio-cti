@@ -1,0 +1,27 @@
+<p align = "left">Métodos e Campos do Calendar: </p>
+<pre>
+	<code data-trim datanoescape>
+		Métodos
+
+add(int campo, int quantidade); //Adiciona ou subtrai tempo do campo do calendário
+get(int campo); //Retorna o valor do campo que foi dado do calendário
+getInstance(); //Retorna um calendário, você pode especificar um local
+getTimeInMillis(); //Retorna o tempo deste calendário em millis, como um long
+roll(int campo, boolean up); //Adiciona ou subtrai o tempo sem mudar os campos maiores
+set(int campo, int valor); //Set o valor do campo entregue do calendário
+set(ano, mês, dia, hora, minuto); //Set uma variedade completa do calendário, com os tipos em Int. O mês é baseado em 0 (0 – 11)
+setTimeinMillis(long millis); //Set o tempo do calendário baseado em um tempo em millis no formato long
+
+
+		Campos chaves do calendário
+
+DATA / DAY_OF_MONTH // Get/Set dia do mês
+HOUR / HOUR_OF_DAY // Get/Set o valor de 12 horas ou 24 horas
+MILLISECOND //Get/Set os milissegundos
+MINUTE //Get/Set o minuto
+MONTH //Get/Set o mês
+YEAR //Get/Set o ano
+ZONE_OFFSET // Get/Set o tipo de fuso horário de GMT em milissegundos
+
+	</code>
+</pre>

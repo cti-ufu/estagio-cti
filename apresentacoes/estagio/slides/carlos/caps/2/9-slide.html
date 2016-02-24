@@ -1,0 +1,15 @@
+<h5>Empacotamento/Desempacotamento ANTES do Java 5.0</h5>
+<p>
+	Antes do Java 5.0 era necessário empacotar todos os primitivos em um objeto, através de classes que foram feitas justamente para isso (uma classe empacotadora para cada tipo de  primitivo), apenas para guardar dentro de coleções como <em>ArrayList</em> ou <em>HashMap</em>.
+</p>
+<small align = "left">Exemplo: </small>
+<pre>
+	<code data-trim datanoescape>
+		//Empacotando um valor
+		int i = 288;
+		Integer iEmpacotado = new Integer(i); //Colocar a variável primitiva no construtor do empacotador Integer
+
+		//Desempacotar um valor
+		int desempacotado = iEmbrulho.intValue(); //Todos os empacotadores funcionam dessa forma. Boolean tem booleanValue(), Character tem charValue(), etc.
+	</code>
+</pre>
