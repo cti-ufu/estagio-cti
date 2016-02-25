@@ -1,0 +1,8 @@
+<h5>Desserialização : Restaurando um Objeto</h5>
+<p>
+	É uma forma inversa de serialização, para resconstruir o objeto, porem usando métodos diferentes dos anteriores que serializaram ele:
+</p>
+<li>O que ocorre na Desserialização.</li>
+<li>O objeto é lido do fluxo.</li>
+<li>O JVM determina o tipo de classe do objeto (através da informação salva no objeto serializado)</li>
+<li>O JVM tentar encontrar e carregar o objeto da classe. Se o JVM não puder encontrar e/ou carregar a classe, o JVM joga uma Exceção e a desserialização falha.</li>
