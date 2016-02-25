@@ -1,12 +1,11 @@
-<div align="left"><h5><font face="Georgia" color="#9F5F9F">3. O cenário de uma pilha:</font></h5></div>
+<div align="left"><h5><font face="Georgia" color="#87CEFF">3. O cenário de uma pilha:</font></h5></div>
 <font face="Times" size="6">
-<pre>
-	<code>
+<pre><code>
 	public void doStuff(){
 		boolean b = true;
 		go(4);
 	}
-	public void o( int x) {
+	public void go( int x) {
 		int z = x+ 24;
 		crazy();
 		<font color="blue">// imagine mais código aqui!</font>
@@ -14,23 +13,18 @@
 	public void crazy(){
 		char c ='a';
 	}
-		
-	</code>
-</pre>
+		</code></pre>
 </font>
-<div align="left"><font face="Georgia" size="6" color="pink"> E as variáveis locais que forem objetos?</div></font>
+<div align="left"><font face="Georgia" size="6" color="#C6E2FF"> E as variáveis locais que forem objetos?</div></font>
 <div align="left"><font face="Georgia" size="4,5">. Se a variável local for uma referência a um objeto, só a variável entrará na pilha.</div>
 <div align="left"><font face="Georgia" size="4,5">. O objeto propriamente dito continará no acervo. </div></font>
 <font face="Times" size="6">
-<pre>
-	<code>
+<pre><code>
 	public void StarckRef(){
 		 public void foof(){
-		   barf();
-		 }
+		   barf(); }
 		 public void barf() {
 		   Duck d= new Duck(24);
 		 }
-	}
-	</code>
-</pre>
+	}	</code></pre>
+<div align="left"><font face="Georgia" size="4"> <b>.E onde residem as variáveis de instância?</b>  R: No acervo, dentro do objeto a que pertencem. </div></font>

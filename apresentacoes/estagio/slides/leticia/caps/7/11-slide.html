@@ -1,11 +1,17 @@
-<div align="left"><h3><font color="#8FBC8F">4. Polimofismo</font></h3></div>
-<div align="left"><font face="Georgia" size="6">. Classes derivadas de uma superclases invocam metodos que apresentam o mesmo nome, porém, comportam-se de maneira diferente para cada uma das subclasses.
-<div align="left"><font face="Georgia" size="5" color="pink"><b>.Exemplo:</b></div></font>
-<pre>
-	<code>
-	   
-	
-	</code>
-</pre>
+<div align="left"><h3><font color="#87CEFF">Matrizes Poliformicas</font></h3></div>
+<div align="left"><font face="Geogia" size="5,5">
+<pre><code>
+Animal[] animals = new Animal[5]; <font color="blue">//Declara uma matriz de tipo Animal</font>
 
+	animals[0] = new Dog(); <font color="blue"> // Agora pode inserir qualquer subclasse de Animal na matriz Animal.</font>
+	animals[1] = new Cat();
+	animals[2] = new Wolf();
+	animals[3] = new Hippo();
+	animals[4] = new Lion();
+
+	for(int i=0; i < animals.length;i++){ <font color="blue">// Percorre a matriz e chama um dos métodos </font>
+	animals[i].eat();                        <font color="blue">da classe Animal,e todos os objetos se comportarão da forma correta!</font>
+	animals[i].roam();  <font color="blue">// Quando i for igual a 0, ir´a acionar o método eat() a Dog e assim por diante. </font>
+}
+</code></pre></font>
 
