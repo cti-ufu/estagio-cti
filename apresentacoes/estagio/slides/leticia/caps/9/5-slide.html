@@ -1,0 +1,25 @@
+<div align="left"><h5><font face="Georgia" color="#87CEFF">4. A criação de um objeto</font></h5></div>
+<div align="left"><font face="Georgia" size="4,5">. Ocorre na etapa "Musico c = <font color="red"><u>new</u></font> Musico();".</div>
+<div align="left">. A palavra <u>new</u> chama um construtor. </div>
+<div align="left"><font face="Georgia" size="4,5">. Toda classe criada terá um construtor.</div></font>
+<div align="left"><font face="Georgia" size="4,5">. Caso não seja criado, o compilador inserirá um padrão, sem argumentos. </div></font>
+<br/>
+<div align="left"><font face="Georgia" size="5,5" color="#C6E2FF"> Construindo um objeto Musico:</div></font>
+<font face="Times" size="6">
+<pre>
+	<code>
+	public class Musico{ 
+		<u>public Musico</u> { <font color="blue"> // nome igual ao da classe e sem tipo de retorno.</font>
+			System.out.println("Cantar"); <font color="blue"> // código do construtor.</font>
+	}
+	public class UseMusico{
+		public static void main(Strig[] args){
+			Musico c = <font color="red">new</font> Musico();<font color="blue"> // chamará o contrutor músico.</font>
+	}
+	}
+
+	</code>
+</pre>
+</font>
+<div align="left"><font face="Georgia" size="4,5">. O melhor lugar para inserir  o código de inicialização é no construtor. E tudo que é preciso é criar um construtor com argumentos, porém, se preferir tornar a criação do objeo mais fácil, forneça um construtor sem argumentos. </div></font>
+

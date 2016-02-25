@@ -1,0 +1,30 @@
+<div align="left"><h5><font face="Georgia" color="#87CEFF">5. Relação das superclasses e a herança com os construtores</font></h5></div>
+<div align="left"><font face="Georgia" size="4,5">. A função dos construtores da superclasse é dar vida a um objeto, e toda superclasse possue um construtor.</div>
+<div align="left">. Superconstrutor: são executados para construir as partes do objeto referentes às superclasse. </div>
+<div align="left"><font face="Georgia" size="4,5">. Todas as variáveis de instância de qualquer classe da árvore de herança precisam que ser declaradas e inicializadas.</div></font>
+<div align="left"><font face="Georgia" size="6" color="#C6E2FF"> . Encadeamento de Construtores:  </div></font><font face="Times" size="6">
+<pre>
+	<code>
+	public class Musico{
+		public Musico(){
+			System.out.println("Criando Musico.");
+		}
+	}	
+	public class Cantor extends Musico{
+		public Cantor(){
+			System.out.println("Criando Cantor.");	
+		}                                           
+	}                                               
+	public class UseMusico{							
+		public static void main(String[] args){
+			System.out.println("Iniciando...");
+			Cantor c = new Cantor();
+		}
+	}
+	</code>
+</pre>
+</font>
+<font face="Georgia" size="2" color="red">OUTPUT:</br>
+<font color="red">Iniciando...</br>
+<font color="red">Criando Musico.</br>
+<font color="red">Criando Cantor.</font>
