@@ -1,0 +1,14 @@
+<h5>Empacotamento/Desempacotamento APÓS o Java 5.0</h5>
+<p>
+	Do Java 5.0 para frente, é feito automaticamente o empacotamento (<em>Autoboxing</em>). Apenas basta definir o tipo de objeto empacotador (<em>Integer</em>, <em>Boolean</em>, etc) na classe de coleção (<em>ArrayList</em> e <em>HashMap</em>). Lembrando que é apenas possível colocar classes como tipo do <em>ArrayList</em> e <em>HashMap</em>, não podendo colocar <em>int</em>, por exemplo, dentro dos colchetes.
+</p>
+<small align = "left">Exemplo: </small>
+<pre>
+	<code data-trim datanoescape>
+		ArrayList<Integer> listOfNumbers = new ArrayList<Integer>();
+		
+		listOfNumbers.add(1); //Automaticamente empacotou o primitivo 1 
+		
+		int num = listOfNumbers.get(0); //E automaticamente desempacotou o primtivo 1, que encontrava-se no index 0
+	</code>
+</pre

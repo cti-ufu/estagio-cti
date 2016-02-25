@@ -1,0 +1,9 @@
+<p>
+	Porém, a ordem dos catches devem ser feito de menor para maior ... deixando as menores subclasses no topo, e aumentando nos próximos catches.
+</p>
+<p>
+	Se deixar um maior sobre um menor, o código não compilara.
+</p>
+<p>
+	Por exemplo, se for fazer um <em>catch(Exception ex)</em> (Exception é como se fosse a classe Objeto no caso de exceções, ele é <ins>A</ins> superclasse maior de todas), o compilador compilara apenas o <em>Catch</em> do <em>Exception</em>, não vendo necessidade de fazer o <em>catch</em> de outras exceções menores.
+</p>
