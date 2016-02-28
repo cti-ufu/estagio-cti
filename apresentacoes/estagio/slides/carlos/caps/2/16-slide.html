@@ -1,0 +1,20 @@
+<h5>Classe <em>Date</em></h5>
+<p>Tem a função de guardar a hora e data atual.</p>
+<small align = "left">Como utilizar: </small>
+<pre>
+	<code data-trim datanoescape>
+		Date hoje = new Date();
+		// %tc → Data completa com horas
+		String.format(“%tc”, hoje); ///Tue Feb 23 03:31:25 MST 2016
+
+		//%tr → Apenas o tempo
+		String.format(“%tr”, hoje); /// 03:31:25 AM
+
+		// %tA → Dia da semana, %tB → Mês, %td → dia do mês
+		String.format(“%tA, %tB %td”, hoje, hoje, hoje); /// Tuesday, February 23
+
+		//Mesmo que o superior, porém sem duplicar a variável
+		String.format(“%tA, %<tB %<td”, hoje); /// Tuesday, February 23
+		//O colchete serve para indicar de utilizar a mesma variável utilizado da última vez pelo anterior.
+	</code>
+</pre>

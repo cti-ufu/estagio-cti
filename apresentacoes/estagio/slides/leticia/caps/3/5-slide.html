@@ -1,0 +1,25 @@
+<div align="left"><h3><font color="#8FBC8F">Exemplo</font></h3></div>
+<pre>
+	<code>
+		<font color="green">class</font> Music {
+	String name; 
+
+		<font color="green">public static void</font> main(String[] args){ 
+		<font color="blue">//cria objeto Music e o acessa</font>
+		Music one = <font color="red">new</font> Music();
+		one.name=<font color="#FF1CAE">"Prey for me"</font>;
+		<font color="blue">//agora cria uma matriz Music</font>
+		Music[] title = <font color="red">new</font> Music[<font color="#FF1CAE">3</font>];
+		title[<font color="#FF1CAE">0</font>] =  <font color="red">new</font> Music();
+		title[<font color="#FF1CAE">1</font>] = <font color="red">new</font> Music();
+		title[<font color="#FF1CAE">2</font>] =  one;
+		<font color="blue">// agora acessa os objetos  Musica</font>
+		<font color="blue">//usando as referências da matriz</font>
+		title[<font color="#FF1CAE">0</font>].name=<font color="#FF1CAE">"I'm so sick"</font>;
+		title[<font color="#FF1CAE">1</font>].name=<font color="#FF1CAE">"Vitória"</font>;
+		System.out.println(<font color="#FF1CAE">"O nome da múscia é"</font>);
+		System.out.print(title[<font color="#FF1CAE">2</font>].name);
+	}
+	}
+		</cod>
+	</pre>

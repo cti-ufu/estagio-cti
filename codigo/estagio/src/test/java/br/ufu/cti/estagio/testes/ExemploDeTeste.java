@@ -7,19 +7,15 @@ import org.junit.Test;
 public class ExemploDeTeste {
 
 	@Test
-	public void testandoAssertEqualSuccess() {
-
-		// Teste com sucesso
-		assertEquals("String", "String");
-
-	}
-
-	@Test
-	public void testandoAssertEqualFail() {
-
-		// Teste com falha
-		assertEquals("fail", "success");
-
+<<<<<<< HEAD
+	public void test(){
+		
+		fail("Not yet implemented");
+		
+=======
+	public void test() {
+		fail("Not yet implemented");
+>>>>>>> cap789
 	}
 
 }

@@ -1,0 +1,107 @@
+<font face="Georgia" size="6">
+<pre>
+	<code>
+public abstract class Eletrodomestico {
+  private boolean ligado;
+  private int voltagem;
+    <font color="blue">// métodos abstratos //
+    /*
+     * não possuem corpo, da mesma forma que
+     * as assinaturas de método de uma interface
+     */</font>
+    public abstract void ligar();
+    public abstract void desligar();
+    <font color="blue">// método construtor //
+    /*
+     * Classes Abstratas também podem ter métodos construtores,
+     * porém, não podem ser usados para instanciar um objeto diretamente
+     */</font>
+    public Eletrodomestico(boolean ligado, int voltagem) {
+        this.ligado = ligado;
+        this.voltagem = voltagem;
+    }
+    <font color="blue">// métodos concretos
+    /*
+     * Uma classe abstrata pode possuir métodos não abstratos
+     */</font>
+    public void setVoltagem(int voltagem) {
+        this.voltagem = voltagem;
+    }
+    public int getVoltagem() {
+        return this.voltagem;
+    }
+    public void setLigado(boolean ligado) {
+        this.ligado = ligado;
+    }
+        public boolean isLigado() {
+        return ligado;
+    }
+}
+
+public class TV extends Eletrodomestico {
+    private int tamanho;
+    private int canal;
+    private int volume;
+    public TV(int tamanho, int voltagem) {
+        super (false, voltagem); // construtor classe abstrata
+        this.tamanho = tamanho;
+        this.canal = 0;
+        this.volume = 0;
+    }
+    <font color="blue">/* implementação dos métodos abstratos */</font>
+    public void desligar() {
+        super.setLigado(false);
+        setCanal(0);
+        setVolume(0);
+    }
+    public void ligar() {
+        super.setLigado(true);
+        setCanal(3);
+        setVolume(25);
+    }
+    <font color="blue">// abaixo teríamos todos os métodos construtores get e set...</font>
+}
+   public class Radio extends Eletrodomestico {
+    public static final short AM = 1;
+    public static final short FM = 2;
+    private int banda;
+    private float sintonia;
+    private int volume;
+    public Radio(int voltagem) {
+        super(false, voltagem);
+        setBanda(Radio.FM);
+        setSintonia(0);
+        setVolume(0);
+}
+    <font color="blue">/* implementação dos métodos abstratos */</font>
+    public void desligar() {
+        super.setLigado(false);
+        setSintonia(0);
+        setVolume(0);
+    }
+    public void ligar() {
+        super.setLigado(true);
+        setSintonia(88.1f);
+        setVolume(25);
+    }
+    <font color="blue">// abaixo teríamos todos os métodos construtores get e set...</font>
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TV tv1 = new TV(29, 110);
+        Radio radio1 = new Radio(110);
+        <font color="blue">/*
+         * chamando os métodos abstratos implementados
+         * dentro de cada classe (TV e Radio)
+         */</font>
+        tv1.ligar();
+        radio1.ligar();
+        System.out.print("Neste momento a TV está ");
+        System.out.println(tv1.isLigado() ? "ligada" : "desligada");
+        System.out.print("e o Rádio está ");
+        System.out.println(radio1.isLigado() ? "ligado." : "desligado.");
+    }
+}
+	</code>
+</pre>

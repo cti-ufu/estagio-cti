@@ -1,0 +1,17 @@
+<h5>Static Import</h5>
+<p>Static import serve apenas para digitar menos os métodos de classes static, para facilitar na digitação. O problema é que isso pode tornar a leitura dos códigos um pouco mais difícil, caso tenha classes static diferentes com o mesmo nome de método.</p>
+<small align = "left">Exemplos: </small>
+<pre>
+	<code data-trim datanoescape>
+		Normal:
+		import Java.lang.Math;
+		System.out.println(“sqrt “ + Math.sqrt(2.0));
+
+		Com Static:
+		import static Java.lang.Math.*;
+		import static Java.lang.System.out;
+
+		out.println(“sqrt “ + sqrt(2.0));
+
+	</code>
+</pre>
