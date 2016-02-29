@@ -7,35 +7,53 @@ public class Caixa {
 	private ArrayList<FluxoDeCaixa> listaDespesas = new ArrayList<FluxoDeCaixa>();
 	private ArrayList<FluxoDeCaixa> listaReceitas = new ArrayList<FluxoDeCaixa>();
 	
-	public void setListaDespesas(ArrayList lista) {
+	public void setListaDespesas(ArrayList<FluxoDeCaixa> lista) {
 		
 		listaDespesas = lista;
 	}
 	
-	public ArrayList getListaDespesas() {
+	public ArrayList<FluxoDeCaixa> getListaDespesas() {
 		
 		return listaDespesas;
 	}
 	
-	public void setListaReceitas(ArrayList lista) {
+	public void setListaReceitas(ArrayList<FluxoDeCaixa> lista) {
 		
 		listaReceitas = lista;
 	}
 	
-	public ArrayList getListaReceitas() {
+	public ArrayList<FluxoDeCaixa> getListaReceitas() {
 		
 		return listaReceitas;
 	}
 	
 	public void cadastrarReceita(String info, double valor) {
 		
-		FluxoDeCaixa receita = new FluxoDeCaixa(info, valor);
-		listaReceitas.add(receita);
+		if(valor > 0) {
+			
+			FluxoDeCaixa receita = new FluxoDeCaixa(info, valor);
+			listaReceitas.add(receita);
+		}
+		
+		else {
+			
+			System.out.println("Valor de receita inválido");
+			return;
+		}
 	}
 	
 	public void cadastrarDespesa(String info, double valor) {
 		
-		FluxoDeCaixa despesa = new FluxoDeCaixa(info, valor);
-		listaReceitas.add(despesa);
+		if(valor <= 0) {
+			
+			FluxoDeCaixa despesa = new FluxoDeCaixa(info, valor);
+			listaReceitas.add(despesa);
+		}
+		
+		else {
+			
+			System.out.println("Valor de despesa inválido");
+			return;
+		}
 	}
 }

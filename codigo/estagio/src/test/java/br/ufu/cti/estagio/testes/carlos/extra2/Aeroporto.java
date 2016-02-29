@@ -75,17 +75,17 @@ public class Aeroporto {
 	}
 	
 	public void verificarVoosEmpresas(EmpresaAerea emp) {
+		
+		System.out.println("A empresa " + emp + " tem " + emp.getListaVoos().size());
 
-		ArrayList<Voo> lista = emp.getListaVoos();
-		int count = 0;
-		for(Voo voos : lista) {
-			count++;
-			System.out.printf("Voo %d%n", count);
-			System.out.println(voos.getIdentificador());
-			System.out.println(voos.getOrigem());
-			System.out.println(voos.getDestino());
-			System.out.println(voos.getHorarioSaida());
-			System.out.println(voos.getHorarioChegada());
+		for(Voo voo : emp.getListaVoos()) {
+			
+			System.out.printf("Voo %d%n", emp.getListaVoos().indexOf(voo) + 1 );
+			System.out.println("Número do voo: " + voo.getIdentificador());
+			System.out.println("Origem: " + voo.getOrigem());
+			System.out.println("Destino: " + voo.getDestino());
+			System.out.println("Horário de Saída: " + voo.getHorarioSaida());
+			System.out.println("Horário de Chegada: " + voo.getHorarioChegada());
 			System.out.println();
 		}
 	}

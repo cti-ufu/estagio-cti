@@ -63,23 +63,43 @@ public class EmpresaAerea{
 	
 	public void vendaVoo(Voo num, Passageiro pas, double valor, Caixa caixa) {
 		
-		for(Voo voo : this.listaVoos) {
+		if(this.listaVoos.contains(num) == true) {
 			
-			if(num == voo) {
+			if(this.listaVoos.size() < 150) {
 				
+				if(valor == 300) {
+					
+					num.getListaPassageiros().add(pas);
+					pas.getListaVoos().add(num);
+					String info = "Venda de passagem do Voo " + num + ".";
+					FluxoDeCaixa receita = new FluxoDeCaixa(info, valor);
+					caixa.getListaReceitas().add(receita);
+				}
 				
+				else {
+					
+					System.out.println("Valor de pagamento (" + valor + "R$) não confere com o preço da passagem (300R$):");
+					return;
+				}
+			}
+			
+			else {
+				
+				System.out.println("Não há mais vagas para passageiros.");
+				return;
 			}
 		}
-		String info = "Venda de passagem do Voo " + num + ".";
-		FluxoDeCaixa receita = new FluxoDeCaixa(info, valor);
-		caixa.getListaReceitas().add(receita);
-		num.getListaPassageiros().add(pas);
+		
+		else {
+			
+			System.out.println("Voo não existe.");
+			return;
+		}
 		
 	}
 	
 	public void cadastrarNovaDespesa(String info, double valor, Caixa caixa) {
 		
-		FluxoDeCaixa despesa = new FluxoDeCaixa(info, valor);
-		caixa.getListaDespesas().add(despesa);
+		caixa.cadastrarDespesa(info, valor);
 	}
 }
