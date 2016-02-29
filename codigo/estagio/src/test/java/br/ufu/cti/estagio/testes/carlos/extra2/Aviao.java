@@ -1,4 +1,4 @@
-package extra2;
+package br.ufu.cti.estagio.testes.carlos.extra2;
 
 public class Aviao {
 

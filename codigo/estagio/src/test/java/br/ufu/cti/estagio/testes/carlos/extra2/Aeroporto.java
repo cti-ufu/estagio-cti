@@ -1,4 +1,4 @@
-package extra2;
+package br.ufu.cti.estagio.testes.carlos.extra2;
 
 import java.util.ArrayList;
 
@@ -52,12 +52,12 @@ public class Aeroporto {
 		return endereco;
 	}
 	
-	private void setListaEmpresasAereas(ArrayList<EmpresaAerea> listaEmpresasAereas) {
+	public void setListaEmpresasAereas(ArrayList<EmpresaAerea> listaEmpresasAereas) {
 		
 		this.listaEmpresasAereas = listaEmpresasAereas;
 	}
 	
-	private ArrayList<EmpresaAerea> getListaEmpresasAereas() {
+	public ArrayList<EmpresaAerea> getListaEmpresasAereas() {
 		
 		return listaEmpresasAereas;
 	}
@@ -65,7 +65,7 @@ public class Aeroporto {
 	public void adicionarEmpresaAerea(EmpresaAerea emp) {
 		
 		listaEmpresasAereas.add(emp);
-		System.out.println("Empresa " + emp + " adicionada à lista.");
+		System.out.println("Empresa " + emp + " adicionada ï¿½ lista.");
 	}
 	
 	public void removerEmpresaAerea(EmpresaAerea emp) {

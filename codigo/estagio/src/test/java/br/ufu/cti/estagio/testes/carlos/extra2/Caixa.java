@@ -1,29 +1,41 @@
-package extra2;
+package br.ufu.cti.estagio.testes.carlos.extra2;
 
 import java.util.ArrayList;
 
 public class Caixa {
 
-	private ArrayList<Despesas> listaDespesas = new ArrayList<Despesas>();
-	private ArrayList<Receitas> listaReceitas = new ArrayList<Receitas>();
+	private ArrayList<FluxoDeCaixa> listaDespesas = new ArrayList<FluxoDeCaixa>();
+	private ArrayList<FluxoDeCaixa> listaReceitas = new ArrayList<FluxoDeCaixa>();
 	
-	private void setListaDespesas(ArrayList listaDespesas) {
+	public void setListaDespesas(ArrayList lista) {
 		
-		this.listaDespesas = listaDespesas;
+		listaDespesas = lista;
 	}
 	
-	private ArrayList getListaDespesas() {
+	public ArrayList getListaDespesas() {
 		
 		return listaDespesas;
 	}
 	
-	private void setListaReceitas(ArrayList listaReceitas) {
+	public void setListaReceitas(ArrayList lista) {
 		
-		this.listaReceitas = listaReceitas;
+		listaReceitas = lista;
 	}
 	
-	private ArrayList getListaReceitas() {
+	public ArrayList getListaReceitas() {
 		
 		return listaReceitas;
+	}
+	
+	public void cadastrarReceita(String info, double valor) {
+		
+		FluxoDeCaixa receita = new FluxoDeCaixa(info, valor);
+		listaReceitas.add(receita);
+	}
+	
+	public void cadastrarDespesa(String info, double valor) {
+		
+		FluxoDeCaixa despesa = new FluxoDeCaixa(info, valor);
+		listaReceitas.add(despesa);
 	}
 }

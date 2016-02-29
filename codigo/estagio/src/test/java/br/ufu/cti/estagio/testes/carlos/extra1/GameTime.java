@@ -1,4 +1,4 @@
-package extra1;
+package br.ufu.cti.estagio.testes.carlos.extra1;
 
 //import java.util.Scanner;
 

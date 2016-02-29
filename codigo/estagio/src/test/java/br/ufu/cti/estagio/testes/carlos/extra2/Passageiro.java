@@ -1,4 +1,4 @@
-package extra2;
+package br.ufu.cti.estagio.testes.carlos.extra2;
 
 import java.util.ArrayList;
 
@@ -28,13 +28,18 @@ public class Passageiro {
 		return cpf;
 	}
 	
-	private void setListaVoos(ArrayList<Voo> listaVoos) {
+	public void setListaVoos(ArrayList<Voo> listaVoos) {
 		
 		this.listaVoos = listaVoos;
 	}
 	
-	private ArrayList<Voo> getListaVoos() {
+	public ArrayList<Voo> getListaVoos() {
 		
 		return listaVoos;
+	}
+	
+	public void comprarVoo(Voo num, double valor) {
+		
+		
 	}
 }
