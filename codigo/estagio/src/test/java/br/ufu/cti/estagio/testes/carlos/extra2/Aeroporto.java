@@ -6,11 +6,20 @@ public class Aeroporto {
 
 	private String nome;
 	private double taxaDeEmbarque;
-	private long codigoReduzido;
+	private String codigoReduzido;
 	private String endereco;
 	private ArrayList<EmpresaAerea> listaEmpresasAereas = new ArrayList<EmpresaAerea>();
 	static String var = "emp";
 	static Integer cont = 0;
+	
+	public Aeroporto(String nome, double taxaDeEmbarque, String codigoReduzido, String endereco, ArrayList<EmpresaAerea> listaEmpresasAereas) {
+		
+		this.nome = nome;
+		this.taxaDeEmbarque = taxaDeEmbarque;
+		this.codigoReduzido = codigoReduzido;
+		this.endereco = endereco;
+		this.listaEmpresasAereas = listaEmpresasAereas;
+	}
 	
 	public void setNome(String nome) {
 		
@@ -32,12 +41,12 @@ public class Aeroporto {
 		return taxaDeEmbarque;
 	}
 	
-	public void setCodigoReduzido(long codigoReduzido) {
+	public void setCodigoReduzido(String codigoReduzido) {
 		
 		this.codigoReduzido = codigoReduzido;
 	}
 	
-	public long getCodigoReduzido() {
+	public String getCodigoReduzido() {
 		
 		return codigoReduzido;
 	}
@@ -81,11 +90,11 @@ public class Aeroporto {
 		for(Voo voo : emp.getListaVoos()) {
 			
 			System.out.printf("Voo %d%n", emp.getListaVoos().indexOf(voo) + 1 );
-			System.out.println("Número do voo: " + voo.getIdentificador());
+			System.out.println("Numero do voo: " + voo.getIdentificador());
 			System.out.println("Origem: " + voo.getOrigem());
 			System.out.println("Destino: " + voo.getDestino());
-			System.out.println("Horário de Saída: " + voo.getHorarioSaida());
-			System.out.println("Horário de Chegada: " + voo.getHorarioChegada());
+			System.out.println("Horario de Saida: " + voo.getHorarioSaida());
+			System.out.println("Horario de Chegada: " + voo.getHorarioChegada());
 			System.out.println();
 		}
 	}

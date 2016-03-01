@@ -7,6 +7,12 @@ public class Caixa {
 	private ArrayList<FluxoDeCaixa> listaDespesas = new ArrayList<FluxoDeCaixa>();
 	private ArrayList<FluxoDeCaixa> listaReceitas = new ArrayList<FluxoDeCaixa>();
 	
+	public Caixa(ArrayList<FluxoDeCaixa> listaDespesas, ArrayList<FluxoDeCaixa> listaReceitas) {
+		
+		this.listaDespesas = listaDespesas;
+		this.listaReceitas = listaReceitas;
+	}
+	
 	public void setListaDespesas(ArrayList<FluxoDeCaixa> lista) {
 		
 		listaDespesas = lista;
@@ -37,7 +43,7 @@ public class Caixa {
 		
 		else {
 			
-			System.out.println("Valor de receita inválido");
+			System.out.println("Valor de receita invalido");
 			return;
 		}
 	}
@@ -52,7 +58,7 @@ public class Caixa {
 		
 		else {
 			
-			System.out.println("Valor de despesa inválido");
+			System.out.println("Valor de despesa invalido");
 			return;
 		}
 	}

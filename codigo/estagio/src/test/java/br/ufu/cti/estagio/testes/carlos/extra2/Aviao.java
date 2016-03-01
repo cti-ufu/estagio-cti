@@ -6,6 +6,13 @@ public class Aviao {
 	private long identificador;
 	private int capacidadeDePassageiros;
 	
+	public Aviao(String modelo, long identificador, int capacidadeDePassageiros) {
+		
+		this.modelo = modelo;
+		this.identificador = identificador;
+		this.capacidadeDePassageiros = capacidadeDePassageiros;
+	}
+	
 	public void setModelo(String modelo) {
 		
 		this.modelo = modelo;

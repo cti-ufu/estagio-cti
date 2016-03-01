@@ -5,8 +5,15 @@ import java.util.ArrayList;
 public class Passageiro {
 
 	private String nome;
-	private long cpf;
+	private String cpf;
 	private ArrayList<Voo> listaVoos = new ArrayList<Voo>();
+	
+	public Passageiro(String nome, String cpf, ArrayList<Voo> listaVoos) {
+		
+		this.nome = nome;
+		this.cpf = cpf;
+		this.listaVoos = listaVoos;
+	}
 	
 	public void setNome(String nome) {
 		
@@ -18,12 +25,12 @@ public class Passageiro {
 		return nome;
 	}
 	
-	public void setCpf(long cpf) {
+	public void setCpf(String cpf) {
 		
 		this.cpf = cpf;
 	}
 	
-	public long getCpf() {
+	public String getCpf() {
 		
 		return cpf;
 	}
@@ -55,21 +62,21 @@ public class Passageiro {
 				
 				else {
 					
-					System.out.println("Valor de pagamento (" + valor + "R$) não confere com o preço da passagem (300R$):");
+					System.out.println("Valor de pagamento (" + valor + "R$) nao confere com o preco da passagem (300R$):");
 					return;
 				}
 			}
 			
 			else {
 				
-				System.out.println("Não há mais vagas para passageiros.");
+				System.out.println("Nao ha mais vagas para passageiros.");
 				return;
 			}
 		}
 		
 		else {
 			
-			System.out.println("Voo não existe.");
+			System.out.println("Voo nao existe.");
 			return;
 		}
 	}

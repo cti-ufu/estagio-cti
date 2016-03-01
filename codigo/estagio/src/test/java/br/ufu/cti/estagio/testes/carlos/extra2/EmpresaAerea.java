@@ -9,6 +9,14 @@ public class EmpresaAerea{
 	private ArrayList<Voo> listaVoos = new ArrayList<Voo>();
 	private Caixa caixa;
 	
+	public EmpresaAerea(String nome, ArrayList<String> listaAvioes, ArrayList<Voo> listaVoos, Caixa caixa) {
+		
+		this.nome = nome;
+		this.listaAvioes = listaAvioes;
+		this.listaVoos = listaVoos;
+		this.caixa = caixa;
+	}
+	
 	public void setNome(String nome) {
 		
 		this.nome = nome;
@@ -78,21 +86,21 @@ public class EmpresaAerea{
 				
 				else {
 					
-					System.out.println("Valor de pagamento (" + valor + "R$) não confere com o preço da passagem (300R$):");
+					System.out.println("Valor de pagamento (" + valor + "R$) nao confere com o preco da passagem (300R$):");
 					return;
 				}
 			}
 			
 			else {
 				
-				System.out.println("Não há mais vagas para passageiros.");
+				System.out.println("Nao ha mais vagas para passageiros.");
 				return;
 			}
 		}
 		
 		else {
 			
-			System.out.println("Voo não existe.");
+			System.out.println("Voo nao existe.");
 			return;
 		}
 		

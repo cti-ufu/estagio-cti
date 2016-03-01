@@ -10,7 +10,17 @@ public class Voo {
 	private String destino;
 	private Calendar horarioChegada = Calendar.getInstance();
 	private Calendar horarioSaida = Calendar.getInstance();
-	private ArrayList<Passageiro> listaPassageiros = new ArrayList<Passageiro>(150);
+	private ArrayList<Passageiro> listaPassageiros = new ArrayList<Passageiro>(); //Adicionar capacidade de passageiros do objeto da classe Aviao
+	
+	public Voo(long identificador, String origem, String destino, Calendar horarioChegada, Calendar horarioSaida, ArrayList<Passageiro> listaPassageiros) {
+		
+		this.identificador = identificador;
+		this.origem = origem;
+		this.destino = destino;
+		this.horarioChegada = horarioChegada;
+		this.horarioSaida = horarioSaida;
+		this.listaPassageiros = listaPassageiros;
+	}
 	
 	public void setIdentificador(long identificador) {
 		
