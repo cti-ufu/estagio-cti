@@ -1,10 +1,10 @@
- <div align="left"><h4><font face="Georgia"  color="#87CEFF">Comparable</font></h4></div>
-<div align="left"><font face="Georgia" color="white" size="5,5">. O método <i>sort()</i> só pode usar listas de objetos <u>Comparaple</u>.</font></div></div>
-<div align="left"><font face="Georgia" color="white" size="5,5">. Ao classificar uma lista de objetos de outro tipo, ele não funcionará, mas funcionará ao classificar uma lista de Strings.</font></div>
-<font face="Georgia" color="white" size="6">
-<pre><code>	public static < <b>T extends Comparable</b>  < ? super T> > void sort(List < T > list)</pre></code></font>
-<div align="left"><font face="Georgia" size="5,5" color="#C6E2FF"> Para os tipos genéricos, <i>"extends"</i> significa <i>"extends"</i> ou <i>"implements"</i>.</font></div>
-<div align="left"><font face="Georgia" color="white" size="5,5">. Só podemos passar uma lista de objetos para o método <i>sort()</i> se a classe do Objeto implementar <i>Comparable.</i></font></div>
-<div align="left"><font face="Georgia" color="white" size="5,5">. Os documentos da API mostra que a interface Comparable possue apenas um método para implementar. </font></div><br/>
-<div align="center"><font face="Georgia" color="white" size="4">java.util.Comparable
-	IMAGEM
+<font face="Georgia" color="#87CEFF"><b>Usando <u>Métodos</u> Genéricos</b></font>
+<div align="left"><font face="Georgia" color="white" size="5,5">. Um método ser  genérico significa que a declaração do método usa um parâmetro de tipo em sua assinatura.</div>
+<div align="left"><b>1</b>.Usando o parâmetro d tipo definido na declaração da classe.</div></font>
+EXEMPLO
+<div align="left"><font face="Georgia" color="white" size="5,5"><b>2</b>.Usando um parâmetro de tipo que não foi definido na declaração da classe.</div></font>
+EXEMPLO
+<font face="Georgia" size="6,5" color="#C6E2FF"> São <b>válidas</b> , mas <u> diferentes</u>!</font></font>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O 1º significa que qualquer ArrayList declarada com o tipo Animal ou um dos seus subtipos, pode ser usada.</div>
+<div align="left">. O 2º significa que só ArrayList < Animal > pode ser usada,ou seja, somente uma ArrayList de tipo Animal pode ser usada.</div></font>
+

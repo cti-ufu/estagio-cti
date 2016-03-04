@@ -1,9 +1,14 @@
-<font face="Georgia" color="#87CEFF"><b>Usando <u>Classes</u> Genéricas</b></font><br/>
-<div align="left"><font face="Georgia" color="white"size="5,5">. Uma classe ser genérica significa que a declaração da classe inclui um parâmero de tipo.</div>
-<div align="left"><font face="Georgia" color="white" size="5,5">. As duas áreas que devem ser examinadas em uma classe genérica são:</div><br/>
-<div align="left"><font face="Georgia" color="white" size="5,5"><b>1</b>.A declaração da classe;</div></font>
-<div align="left"><font face="Georgia" color="white" size="5,5"><b>2</b>. As declarações de métodos que lhe permitirão adicinar elementos.</div></font>
-<div align="left"><font face="Georgia" color="white" size="5,5"> O tipo de elemento que o conjunto armazerar e retornar, será substituido por um tipo real usado para criar a ArrayList. </font></font>
-
-
-IMAGEM
+<h5><font face="Georgia" color="#87CEFF">Tipos Genéricos</font></h5>
+<div align="left"><font face="Georgia" color="white" size="5,5">. Possuem uma finalidade principal de permitir a criação de conjuntos com compatibilidade de tipos.</div>
+<div align="left">. Será possível criar conjuntos de tipos compatibilidade onde a maioria dos problemas serão capturados no tempo de compilação e não no tempo de execução.</div>
+<div align="left">. Sem os tipos genéricos, o compilador permitiria inserir um objeto Dog em uma Arraylist projetada para armazenar só objetos Cat. </div></font>
+<div align="left"><font face="Georgia" color="#C6E2FF" size="5,5">. Conhecendo os Tipos Genéricos: </div></font>
+<div align="left"><font face="Georgia" color="white" size="4,5"><b>1</b>.Criação de instâncias de classes generelizadas(como ArrayList):<font face="courier new" color="#66FFFF"> <br/>new ArrayList< song >()</font></div></font>
+<div align="left"><font face="Georgia" color="white" size="4,5"><b>2</b>.Declaração e atribuição de variáveis de tipos genéricos:<font face="courier new" color="#66FFFF"> <br/>List< song > songList = new ArrayList < song >()</font></div></font>
+<div align="left"><font face="Georgia" color="white" size="4,5"><b>3</b>.Declaração ( e chamada) de métodos que usem tipos genéricos : 
+<font face="courier new"color="#66FFFF" ><br/>
+void foo(List < Song > list)
+<br/>
+x.foo(songList)
+</div></font></font>
+<img src="../../images/cap16/genericos.png" alt="" width = "300px" height = "auto" />

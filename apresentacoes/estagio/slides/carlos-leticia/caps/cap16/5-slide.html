@@ -1,19 +1,6 @@
-<h5><font face="Georgia" color="#87CEFF">Tipos Genéricos</font></h5>
-<div align="left"><font face="Georgia" color="white" size="5,5">. Possuem uma finalidade principal de permitir a criação de conjuntos com compatibilidade de tipos.</div>
-<div align="left">. Será possível criar conjuntos de tipos compatibilidade onde a maioria dos problemas serão capturados no tempo de compilação e não no tempo de execução.</div>
-<div align="left">. Sem os tipos genéricos, o compilador permitiria inserir um objeto Dog em uma Arraylist projetada para armazenar só objetos Cat. </div></font>
-<br/>
-<div align="left"><font face="Georgia" color="#C6E2FF" size="6">. Conhecendo os Tipos Genéricos: </div></font>
-<div align="left"><font face="Georgia" color="white" size="5,5"><b>1</b>.Criação de instâncias de classes generelizadas(como ArrayList):<font face="courier new" color="#66FFFF"> <br/>new ArrayList< song >()</font></div></font>
-<div align="left"><font face="Georgia" color="white" size="5,5"><b>2</b>.Declaração e atribuição de variáveis de tipos genéricos:<font face="courier new" color="#66FFFF"> <br/>List< song > songList = new ArrayList < song >()</font></div></font>
-<div align="left"><font face="Georgia" color="white" size="5,5"><b>3</b>.Declaração ( e chamada) de métodos que usem tipos genéricos : 
-<font face="courier new"color="#66FFFF" ><br/>
-void foo(List < Song > list)
-<br/>
-x.foo(songList)
-</div></font></font>
-
-
-
-
-IMAGEM
+<font face="Georgia" color="#87CEFF"> <i>toString()</i></font>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O método <i>toString()</i> sobreposto é definido na classe Object, então toda classe em Java o herda.</div>
+<div align="left">. Deve ser sobreposto para que exiba algo mais legível do que o código padrão do identificador exclusivo. </div>
+<div align="left">. Ao exibir uma lista, o método toString() será chamado em cada objeto. </div></font>
+<img src="../../images/cap16/tostring.png" alt="" width = "300px" height = "auto" />
+<div align="left"><font face="Georgia" color="white" size="3,5">. Sobrepõe <i>toString()</i>,pois quando executar uma instrução <i>System.out.println(aSongObject)</i>, exibirá o título. Quando execuar uma instrução <i>System.out.println(aListOfSongs)</i>, ela chamará o método toString()  de <u>cada</u> elemento da lista.</div></font>
