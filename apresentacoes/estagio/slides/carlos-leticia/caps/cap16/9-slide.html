@@ -1,33 +1,6 @@
-<div align="left"><h3><font face="Georgia"  color="#87CEFF">7. Construtores da super classe com argumentos</font></h3></div>
-<font face="Georgia"  size="5">
-<pre><code>
-	public abstract class Musico{
-		private String name; <font color="blue"> //todos os músicos, inclusive as subclasses tem um nome.</font>
+<div align="left"><font face="Georgia" size="30" color="#87CEFF">Método <i>compareTo( )</i></font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. Ele retornará um número negativo, zero ou um inteiro positivo.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O método será chamado em um objeto, passando para ele a referência de um objeto diferente.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O objeto que estiver executando o método, terá que descobrir se o objeto que foi passado deve ser inserido acima, abaixo ou no mesmo local da lista.</font></div>
 
-		public String getName(){ <font color="blue">//um método de captura que Cantor herda.</font>
-			return name;
-		}
-		public Musico(String theName){
-			name = theName; <font color="blue">//O construtor que usa o nome e o atribui à variável de instância name.</font>
-		}
-	public class Cantor extends Musico{
-		public Cantor(String Name){ <font color="blue">//O construtor de Cantor usa um nome.</font>
-			super(name); <font color="blue">// Envia o nome para cima na Pilha até o construtor de Musico.</font>
-		}
-	}
-	public class UseCantor{
-		public static void main (String[] args){
-			Cantor c = new Cantor("Bob Marley"); <font color="blue">// Cria um objeto Cantor passando o nome Bob Marley para seu construtor.</font>
-			System.out.println(c.getName());<font color="blue"> // Chama o metodo getName() herdado por Cantor. </font>
-		}
-	}
-	</code></pre></font>
-	<div align="left"><font face="Georgia"  size="4,5">.Use <b>this()</b> para chamar um construtor a partir de outro construtor sobrecarregado da mesma classe. </div>
-	<div align="left">.Um construtor pode ter uma chamada a <b>super()</b> ou <b>this()</b>, mas nunca ambas. </div></font>
-	<font face="Georgia"  size="5">
-	<pre><code>
-	public Mini(int size){
-		this(Color.Red);
-		super(size);
-	}	                    <font color="red">NÃO FUNCIONA!<font>
-	</code></pre></font>
+EXEMPLO

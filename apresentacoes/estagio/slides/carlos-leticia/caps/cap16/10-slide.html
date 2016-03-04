@@ -1,6 +1,13 @@
-<div align="left"><h4><font face="Georgia"  color="#87CEFF">8. A vida dos Objetos e Variáveis</font></h4></div>
-<div align="left"><font face="Georgia"  size="5">. A vida de um objeto depende inteiramente da vida das referências que apontam para ele.</div>
-<div align="left"><font face="Georgia"  size="5">.Uma variável local estará ativada enquanto seu ponteiro estiver na Pilha. </div>
-<div align="left"><font face="Georgia"  size="5">.Uma variável local só existirá no escopo do método em que foi declarada. </div>
-<div align="left"><font face="Georgia"  size="5">.Mesmas regras para tipos primitivos e referências. </div>
-<div align="left"><font face="Georgia"  size="5">.A vida de uma variável afeta a vida do objeto. </div>
+<div align="left"><h4><font face="Georgia"  color="#87CEFF">Objeto comparator</font></h4></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">.Está na API da classe Collections.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. Usado para classificar a mesma coisa de maneitas diferentes.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O método <i>sort</i> é sobrecarregado para usar o objeto Comparator.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O objeto Comparator será externo ao tipo de elemento que estiver comparando, portanto, pode-se criar vários elementos. </font></div>
+
+EXEMPLO
+
+<div align="left"><font face="Georgia" color="white" size="5,5">. O método <i>sort()</i> ao capturar um objeto Comparator, não precisará chamar o método <i>comareTo()</i> dos elementos da lista, em vez disso, chamará o método <i>compare()</i> no objeto ComparAtor.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. As regras são:</font></div>
+
+IMAGEM
+
