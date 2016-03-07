@@ -1,0 +1,2 @@
+<p>Tudo isso é feito pelo JVM, não há API no Java para acessar o cadeado do objeto. </p>
+<p>É aconselhável utilizar a declaração synchronized apenas em poucos métodos que modifiquem dados importantes e que possa ocorrer Race Condition, fora isso, deve ser evitado de utilizar essa declaração em grande escala, pois isso pode ocasionar em queda de performance por conta da fila de threads que será criado, e também pode ocasionar em um <em><ins>Deadlock.</ins></em></p>
