@@ -1,6 +1,26 @@
-<font face="Georgia" color="#87CEFF"><u><i>Classe Colletions</i></u></font></div>
-<div align="left"><font face="Georgia" color="white" size="5,5">. Há um método sort() na classe.</div>
-<div align="left">. O método Colletins.sort() ordena uma lista de Strings alfabeticamente. </div>
-<div align="left">. O método usa um objeto List e já que ArrayList implementa a interface List, ArrayList É-UM objeto List. Graças ao polimorfismo, pode-se passar uma ArrayList para um método declarado para usar list. </div>
-<img src="../../images/cap16/colletions.png" alt="" width = "800px" height = "auto" />
-<div align="left">. Instâncias reais da Classe na lista e não apenas Strings, para que o Objeto possa ter mais dados.  </div></font>
+<div align="left"><h6><font face="Georgia" color="#8B3A3A">Declarando um Enum</font></h6></div>
+<font face="Georgia" size="6" ><pre><code>public enum Apple {
+	 FUJI, PIPPIN, GRANNY_SMITH 
+	}
+
+</code></pre></font>
+<div align="left"><h6><font face="Georgia" color="#8B3A3A">Inicializando Valores</font></h6></div>
+<font face="Georgia" size="6" >
+<pre><code>public enum Planet {
+	MERCURY(3.302e+23,2.439e6),
+	VENUS (4.869e+24,6.052e6),
+	EARTH (5.975e+24,6.378e6),
+	private final double mass;
+	<font color="blue">// In kilograms</font>
+	private final double radius;
+	<font color="blue">// In meters</font>
+	private final double surfaceGravity; // In m / s^2
+	<font color="blue">// Universal gravitational constant in m^3 / kg s^2</font>
+	private static final double G = 6.67300E-11;
+	<font color="blue">// Constructor</font>
+	Planet(double mass, double radius) {
+		this.mass = mass;
+		this.radius = radius;
+		surfaceGravity = G * mass / (radius * radius);
+	}
+</code></pre></font>
