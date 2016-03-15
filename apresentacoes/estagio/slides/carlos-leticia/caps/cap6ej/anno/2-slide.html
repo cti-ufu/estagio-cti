@@ -1,0 +1,21 @@
+<div align="left"><font face="Georgia" color="white" size="5">Annotations podem ter elementos os quais são possíveis de terem valores inseridos. Um elemento é como um atributo ou paramêtro.</div>
+<font face="Georgia" size="6" >
+	<pre>
+		<code>// Annotate a method.
+
+@MyAnno(str = "Annotation Example", val = 100)
+
+public static void myMeth() { // …
+
+		</code>
+	</pre>
+</font>
+<div align="left"><font face="Georgia" color="white" size="5">Neste exemplo, há dois elementos com valores, separados por vírgulas: str e val.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Se um annotation conter apenas 1 elemento, por questão de padrões de nomeação, ele deverá ser chamado de value.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Ele pode ter seu elemento declarado com o seu nome, ou sem o seu nome (caso seja apenas um elemento value):</div>
+<font face="Georgia" size="6" >
+	<pre>
+		<code>@InsertNew(value = "yes")  //OU
+@InsertNew("yes")</code>
+	</pre>
+</font>

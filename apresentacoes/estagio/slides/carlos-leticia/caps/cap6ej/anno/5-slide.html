@@ -1,0 +1,14 @@
+<div align="left"><h6><font face="Georgia" color="#8B3A3A" size="6">@Override</font></h6></div>
+<div align="left"><font face="Georgia" color="white" size="5">Colocado sobre os métodos que irão sobrescrever os métodos de suas superclasses.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Ele não é necessário de ser usado para fazer um override, porém é uma boa prática, caso ocorra uma mudança de nome do método (Ex. ToString → tostring), o qual não permitirá associar o método com o seus correspondente o qual fará o override, fazendo o compilador gerar um erro caso o método não esteja fazendo nenhum override.</div>
+<p></p>
+<div align="left"><h6><font face="Georgia" color="#8B3A3A" size="6">@SuppressWarnings</font></h6></div>
+<div align="left"><font face="Georgia" color="white" size="5">A anotação @SuppressWarnings faz o compilador suprimir avisos para um determinado método.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Por exemplo, se um método chamar um método obsoleto, ou faz uma conversão do tipo inseguro, o compilador pode gerar um aviso.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Você pode suprimir esses avisos anotando o método que contém o código com a anotação @SuppressWarnings.</div>
+<font face="Georgia" size="6" ><pre><code>@SuppressWarnings
+public void metodoComAviso() {
+	...
+}
+</code></pre></font>
+

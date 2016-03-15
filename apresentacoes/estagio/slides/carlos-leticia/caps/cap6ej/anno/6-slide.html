@@ -1,0 +1,12 @@
+<div align="left"><h5><font face="Georgia" color="#8B3A3A">Criando seu próprio Annotation</font></h5></div>
+<div align="left"><font face="Georgia" color="white" size="5">Os Annotations são definidos em seus próprios arquivos, assim como uma class Java.</div>
+<p></p>
+<font face="Georgia" size="6" ><pre><code>// A simple annotation type.
+@interface MyAnno {
+	String str();
+	int val();
+}
+</code></pre></font>
+<div align="left"><font face="Georgia" color="white" size="5">Para definir que é um annotation, será usado a palavra chave @interface (annotations são interfaces).</div>
+<div align="left"><font face="Georgia" color="white" size="5">Pode definir dentro de seu corpo elementos primitivos e métodos (vazios, por ser uma interface), não podendo usar objetos como tipo de dado.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Dentro deles, podem ser definidos valores padrões para os elementos, que irão ser utilizados caso não tenha sido definido valores no parentesis da chamada do Annotation.</div>

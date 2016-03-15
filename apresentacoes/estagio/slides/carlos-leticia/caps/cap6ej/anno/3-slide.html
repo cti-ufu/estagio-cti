@@ -1,0 +1,19 @@
+<div align="left"><font face="Georgia" color="white" size="5">Annotations usam o @ junto de seu nome para ser identificado como um Annotation.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Pode-se colocar os annotations sobre as classes, interfaces, métodos, parametros dos métodos, campos e variáveis locais.</div>
+<font face="Georgia" size="6" ><pre><code>@Entity
+public class Vehicle {
+
+    @Persistent
+    protected String vehicleName = null;
+
+
+    @Getter
+    public String getVehicleName() {
+        return this.vehicleName;
+    }
+
+    public void setVehicleName(@Optional vehicleName) {
+        this.vehicleName = vehicleName;
+    }
+}
+</code></pre></font>

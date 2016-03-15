@@ -1,0 +1,14 @@
+<div align="left"><h6><font face="Georgia" color="#8B3A3A" size="6">@Documented</font></h6></div>
+<div align="left"><font face="Georgia" color="white" size="5">O <em>annotation</em> @Documented é usado para sinalizar para a ferramenta JavaDoc (gerador de documento do Java, gerando as documentações em formato HTML do código Java) que seu <em>annotation</em> deve estar visível na JavaDoc para as classes que utilizam seu <em>annotation</em>.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Aqui está um exemplo de anotação @Documented Java:</div>
+<font face="Georgia" size="6" ><pre><code>import java.lang.annotation.Documented;
+
+@Documented
+public @interface MyAnnotation {
+
+}
+@MyAnnotation
+public class MySuperClass { ... }
+</code></pre></font>
+<div align="left"><font face="Georgia" color="white" size="5">Quando gerar um JavaDoc para a classe MySuperClass, o @MyAnnotation será incluso.</div>
+<h5>FIM</h5>

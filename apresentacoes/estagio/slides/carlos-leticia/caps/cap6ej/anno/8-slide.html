@@ -1,0 +1,22 @@
+<div align="left"><h6><font face="Georgia" color="#8B3A3A" size="6">@Target</font></h6></div>
+<div align="left"><font face="Georgia" color="white" size="5">É usado para especificar quais elementos do Java o seu Annotation poderá ser usado.</div>
+<font face="Georgia" size="6" ><pre><code>import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+@Target({ElementType.METHOD})
+public @interface MyAnnotation {
+
+    String   value();
+}
+</code></pre></font>
+<div align="left"><font face="Georgia" color="white" size="5">O @MyAnnotation poderá ser usado apenas para marcar métodos.</div>
+<div align="left"><font face="Georgia" color="white" size="5">Possiveis alvos para a classe ElementType:</div>
+<div align="left"><font face="Georgia" color="white" size="5">
+	<li>ElementType.ANNOTATION_TYPE</li>
+	<li>ElementType.CONSTRUCTOR</li>
+	<li>ElementType.FIELD</li>
+	<li>ElementType.LOCAL_VARIABLE</li>
+	<li>ElementType.METHOD</li>
+	<li>ElementType.PACKAGE</li>
+	<li>ElementType.PARAMETER</li>
+	<li>ElementType.TYPE</li>
+</font></div>

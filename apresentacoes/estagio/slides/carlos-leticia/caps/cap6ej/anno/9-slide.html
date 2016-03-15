@@ -1,0 +1,15 @@
+<div align="left"><h6><font face="Georgia" color="#8B3A3A" size="6">@Inherited</font></h6></div>
+<div align="left"><font face="Georgia" color="white" size="5">Serve para definir que um <em>annotation</em> será herdado para as subclasses da classe que fará uso deste <em>annotation</em>.</div>
+<font face="Georgia" size="6" ><pre><code>java.lang.annotation.Inherited
+
+@Inherited
+public @interface MyAnnotation {
+
+}
+
+@MyAnnotation
+public class MySuperClass { ... }
+public class MySubClass extends MySuperClass { ... }
+
+</code></pre></font>
+<div align="left"><font face="Georgia" color="white" size="5">MySuperClass utiliza o @MyAnnotation, que foi marcado como @Inherited, fazendo com que o MySubClass (que é uma subclasse do MySuperClass) também herdará o @MyAnnotation.</div>
