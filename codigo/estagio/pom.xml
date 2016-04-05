@@ -5,7 +5,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>estagio-cti</name>
   
-  <!-- <repositories>
+  
+<!--    <repositories>
 		<repository>
 			<id>ArtifactoryCTI</id>
 			<name>ArtifactoryCTI-releases</name>
@@ -28,8 +29,8 @@
 				<enabled>true</enabled>
 			</releases>
 		</repository>
-	</repositories> -->
-  
+	</repositories>
+   -->
   <dependencies>
 	  <dependency>
 		<groupId>junit</groupId>
