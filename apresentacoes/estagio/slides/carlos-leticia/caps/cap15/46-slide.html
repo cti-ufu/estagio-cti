@@ -1,0 +1,4 @@
+<p>Todo objeto tem um cadeado com apenas uma chave para abri-lo. Os cadeados são utilizados quando o objeto possui métodos synchronized.</p>
+<p>Assim, um thread poderá acessar um ou mais métodos synchronized apenas se ele possui a chave do cadeado do objeto.</p>
+<p>Os cadeados são por objetos, não por métodos, havendo apenas um cadeado e uma chave disponível por objeto.</p>
+<p>Então o primeiro dos dois threads que acessar um método synchronized de um objeto, ele vai tomar a única chave para si, deixando indisponível todos os métodos synchronized para outros threads que tentarem fazer o uso destes métodos, enquanto o primeiro ainda estiver fazendo uso.</p>

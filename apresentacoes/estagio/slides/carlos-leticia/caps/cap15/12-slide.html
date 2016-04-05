@@ -1,0 +1,22 @@
+<h5>Escrever dados para um Socket</h5>
+<p>Podemos utilizar o BufferedWriter ou PrintWriter. O PrintWriter é a escolha básica para escrever uma String por vez, tendo dois métodos: print() e println().</p>
+<pre>
+	<code data-trim data-noescape>
+//Conexão de Socket com o servidor
+	Socket chatSocket = new Socket (“127.0.0.1”, 5000);
+
+
+//Fazer um PrintWriter encadeado ao fluxo de saída (conexão) do nível inferior do soquete.
+
+	PrintWriter writer = new PrintWriter(chatSocket.getOutputStream());
+
+//O fluxo de saída dado pelo chatSocket é encadeado ao PrintWriter através do construtor do PrintWriter, permitindo que escrevamos Strings para a conexão do Socket.
+
+
+//Escrever (print) algo
+	
+	writer.println(“Messagem para enviar”);
+	writer.print(“Outra mensagem”);
+
+    </code>
+</pre>

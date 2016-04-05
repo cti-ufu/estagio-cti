@@ -1,0 +1,5 @@
+<p>3 – Servidor faz um novo Socket para comunicar com este clientes</p>
+<p>Socket sock = serverSock.accept();</p>
+<small>O método accept() bloqueia enquanto ele espera por uma conexão do Socket do cliente. Quando um cliente finalmente tenta conectar, o método retorna um antigo Socket (em uma porta diferente) que sabe como comunicar com o cliente (que conheça o endereço de IP do cliente e também sua porta TCP). O Socket esta sobre uma diferente porta diferente da do ServerSocket, então o ServerSocket pode voltar a esperar por outros clientes.</small>
+<img align="center" src="../../images/cap15/part3.png" alt="Objeto" title="Objeto" vspace="10px" hspace="15px" border="10px" align="center" height="300px" width="700px" />
+<small>Source: <ins>Head First: Java 2nd Ed.</ins></small>

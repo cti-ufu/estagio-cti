@@ -1,0 +1,28 @@
+<pre>
+	<code data-trim data-noescape>
+	public void go() {
+		try { 
+			Socket s = new Socket (“127.0.0.1”, 4242);
+			
+			InputStreamReader streamReader = new InputStreamReader(s.getInputStream());
+			BufferedReader reader = new BufferedReader(streamReader);
+
+			String advice = reader.readLine(); 
+			//Mesma coisa do BufferedReader encadeado a um arquivo. Quando usar o BufferedWriter, o writer não saberá e não se importará de onde os caracteres vieram.
+			
+			System.out.println(“Today you should “ + advice);
+
+			reader.close(); //Fecha todos os fluxos
+		}
+		catch(IOException ex) {
+			ex.printStackTrace();
+		}
+	}
+
+
+	public static void main (String[] args) {
+		DailyAdviceClient client = new DailyAdviceClient();
+		client.go() ; 
+	}
+    </code>
+</pre>

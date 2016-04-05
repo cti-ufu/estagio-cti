@@ -1,0 +1,2 @@
+<p>Para evitar que ocorra o Race Condition em um objeto, assim que um thread usar um método com condições de execução sobre uma variável de instância, o qual modificará dentro dele, nós temos de garantir que este thread termine o método antes que qualquer outro thread possa entrar (utiliza-lo).</p>
+<p>Para isso, utilizaremos a palavra-chave <em><ins>synchronized</ins></em> na declaração do método, modificando-o para que então apenas um thread possa acessá-lo por vez.</p>

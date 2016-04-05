@@ -1,0 +1,3 @@
+<p>Uma das melhores formas para corrigir essa situação, e que tenha apenas uma única situação o qual você deseja, é usando o <em>sleep</em>. </p>
+<p>Ele fará com que nesses poucos segundos que você colocou um <em>thread</em> para dormir, permita que o <em>scheduler</em> faça funcionar o outro <em>thread</em> que estava no <em>Runnable</em>, já que ele age de uma forma muito rápida.</p>
+<p>Porém, o método sleep joga a exceção <em>InterruptedException</em>, necessitando que todo sleep esteja dentro de um <em>try/catch</em> por conta dessa exceção checada.</p>

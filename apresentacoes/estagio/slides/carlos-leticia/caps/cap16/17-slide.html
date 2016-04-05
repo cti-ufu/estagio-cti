@@ -1,0 +1,23 @@
+<div align="left"><h4><font face="Georgia"  color="#87CEFF">Coringa </font></h4></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">.Permite especificar parâmetros, tipos ou subtipos parametrizados.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">.Uma maneira de criar um argumento de método que possa aceitar uma ArrayList de qualquer subtipo.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">O método abaixo, só irá aceitar listas que extendam Number, ou seja, elementos das subclasses de Number.</font></div>
+<font face="Georgia" size="7">
+<pre><code> 
+	public double soma(ArrayList<<b>?</b> extends Number> lista){
+		doble total = 0;
+		for(Number : lista){
+			total+=number.doubleValue();
+		}
+	}
+</code></pre></font>
+<div align="left"><font face="Georgia" color="white" size="5,5">Em caso de pais, ou seja, superclasses:</font></div>
+<font face="Georgia" size="7">
+<pre><code> 
+	public double soma(ArrayList < ? <b>super</b> Number> lista){
+		doble total = 0;
+		for(<b>nomeSuperclasse</b> : lista){
+			total+=number.doubleValue();
+		}
+	}
+</code></pre></font>
