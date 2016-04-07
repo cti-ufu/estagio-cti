@@ -2,6 +2,8 @@ package br.ufu.cti.estagio;
 
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
+import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RefeicaoDAO;
+import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Refeicao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +19,21 @@ public class CapirotoApplicationTests {
 
 	@Autowired
 	RestauranteDAO restauranteDAO;
+	RefeicaoDAO refeicaoDAO;
 
 	@Test
 	public void contextLoads() {
 		restauranteDAO.save(new Restaurante("Umuarama", "Campus Umuarama"));
 		restauranteDAO.save(new Restaurante("STMonica", "Campus Santa Monica"));
-
+			//coloco da data??
 		for (Restaurante restaurante : restauranteDAO.findAll()) {
 			assertNotNull(restaurante);
 		}
+		for (Refeicao refeicao : refeicaoDAO.findAll()){
+			assertNotNull(refeicao);
+		}//??
 	}
+
 
 
 
