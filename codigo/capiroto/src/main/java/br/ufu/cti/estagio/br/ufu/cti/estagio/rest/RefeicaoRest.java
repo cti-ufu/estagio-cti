@@ -19,7 +19,7 @@ public class RefeicaoRest {
 
     @RequestMapping("/buscarCardapioRestaurante")
     public List<Refeicao> buscarCardapioRestaurante () {
-
+    	
         List<Refeicao> cardapios = new ArrayList<>();
 
         for (Refeicao cardapio : refeicaoDAO.findAll()) {

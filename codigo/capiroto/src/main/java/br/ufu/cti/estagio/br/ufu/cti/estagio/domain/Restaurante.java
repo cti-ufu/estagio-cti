@@ -1,6 +1,10 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
 
+import java.util.List;
+
 import javax.persistence.*;
+
+
 
 /**
  * Created by diego on 05/04/16.
@@ -15,7 +19,10 @@ public class Restaurante {
     private Integer idRestaurante;
     private String nomeRestaurante;
     private String enderecoRestaurante;
-
+    
+    @ManyToMany(mappedBy = "restaurantes")
+    private List<Refeicao> refeicoes; 
+    
     public Restaurante (){
 
     }
