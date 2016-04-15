@@ -1,5 +1,4 @@
 package br.ufu.cti.estagio;
-
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RefeicaoDAO;
@@ -25,13 +24,15 @@ public class CapirotoApplicationTests {
 	public void contextLoads() {
 		restauranteDAO.save(new Restaurante("Umuarama", "Campus Umuarama"));
 		restauranteDAO.save(new Restaurante("STMonica", "Campus Santa Monica"));
-			//coloco da data??
+		
 		for (Restaurante restaurante : restauranteDAO.findAll()) {
 			assertNotNull(restaurante);
 		}
+			//asdf
+		
 		for (Refeicao refeicao : refeicaoDAO.findAll()){
 			assertNotNull(refeicao);
-		}//??
+		}
 	}
 
 

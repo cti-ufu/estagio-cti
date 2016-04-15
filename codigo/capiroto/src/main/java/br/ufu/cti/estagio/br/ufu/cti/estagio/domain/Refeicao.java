@@ -1,34 +1,34 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
 
+
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
 
 	@Entity
-	@Table(name = "Refeicao")
+	@Table(name = "REFEICAO")
 	public class Refeicao {
 	
 
 	    @Id
 	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    private Integer idRefeicao;
+	    private Date data;
 	    
-	    
-	    private String dataRefeicao; //olhar essa data
-	    
-	    @ManyToMany
-	    @JoinTable(name = "Refeicao_Restaurante", joinColumns = @JoinColumn(name = "refeicao_id"),
-	    	inverseJoinColumns = @JoinColumn( name = "restaurante_id"))
-	    private List<Restaurante> restaurantes;
+	    @ManyToOne(fetch = FetchType.LAZY)
+		@JoinColumn(name = "idTipoRefeicao", nullable = false)
+	    private TipoRefeicao tipoRefeicao;
 	   
-	    
-	    public Refeicao (String dataRefeicao) {
-	        this.dataRefeicao = dataRefeicao;
-	        
-	    }
+	    @OneToMany(fetch=FetchType.LAZY, mappedBy="refeicao")
+	    private List<ItemRefeicao> itensRefeicoes;     
+	    		
 
+		public Refeicao() {
+			super();
+		}
 
-	    public Integer getIdRefeicao() {
+		public Integer getIdRefeicao() {
 			return idRefeicao;
 		}
 
@@ -36,22 +36,35 @@ import javax.persistence.*;
 			this.idRefeicao = idRefeicao;
 		}
 
-		public String getDataRefeicao() {
-			return dataRefeicao;
+				
+		public Date getData() {
+			return data;
 		}
 
-		public void setDataRefeicao(String dataRefeicao) {
-			this.dataRefeicao = dataRefeicao;
+		public void setData(Date data) {
+			this.data = data;
 		}
 
-		
-		
+		public List<ItemRefeicao> getItensRefeicoes() {
+			return itensRefeicoes;
+		}
+
+		public void setItensRefeicoes(List<ItemRefeicao> itensRefeicoes) {
+			this.itensRefeicoes = itensRefeicoes;
+		}
+
 		@Override
-	    public String toString() {
-	        return "Refeica{" +
-	                "idRefeicao= ' " + idRefeicao + '\'' +
-	                ", dataRefeicao=" + dataRefeicao +
-	                '}';
-	    }
+		public String toString() {
+			return "Refeicao [idRefeicao=" + idRefeicao + ", data=" + data + ", itensRefeicoes=" + itensRefeicoes + "]";
+		}
 
+		public TipoRefeicao getTipoRefeicao() {
+			return tipoRefeicao;
+		}
+
+		public void setTipoRefeicao(TipoRefeicao tipoRefeicao) {
+			this.tipoRefeicao = tipoRefeicao;
+		}
+
+		
 }

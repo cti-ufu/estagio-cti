@@ -40,6 +40,8 @@ public class CapirotoApplication {
 
 				repository.save(new Restaurante("Umuarama", "Campus Umuarama"));
 				repository.save(new Restaurante("STMonica", "Campus Santa Monica"));
+				
+				
 
 				// fetch all customers
 				log.info(" Buscando restaurantes com findAll():");

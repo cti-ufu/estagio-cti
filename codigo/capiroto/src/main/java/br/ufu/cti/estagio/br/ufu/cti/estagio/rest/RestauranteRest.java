@@ -3,6 +3,7 @@ package br.ufu.cti.estagio.br.ufu.cti.estagio.rest;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,14 @@ public class RestauranteRest {
         }
 
         return restaurantes;
+
+    }
+    
+    @RequestMapping("/adicionarRestaurante/{nomeRestaurante}/{enderecoRestaurante}")
+    public void adicionarRestaurante (@PathVariable("nomeRestaurante") String nomeRestaurante,
+    												@PathVariable("enderecoRestaurante") String enderecoRestaurante) {
+
+    	restauranteDAO.save(new Restaurante(nomeRestaurante, enderecoRestaurante));
 
     }
 }

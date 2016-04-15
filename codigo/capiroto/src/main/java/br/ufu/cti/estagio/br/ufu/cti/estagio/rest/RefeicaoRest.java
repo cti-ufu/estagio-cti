@@ -16,17 +16,22 @@ public class RefeicaoRest {
 	
 	@Autowired
     RefeicaoDAO refeicaoDAO;
-
+	
     @RequestMapping("/buscarCardapioRestaurante")
     public List<Refeicao> buscarCardapioRestaurante () {
     	
-        List<Refeicao> cardapios = new ArrayList<>();
+        List<Refeicao> refeicoes = new ArrayList<>();
 
-        for (Refeicao cardapio : refeicaoDAO.findAll()) {
-        	cardapios.add(cardapio);
+        for (Refeicao refeicao : refeicaoDAO.findAll()) {
+        	refeicoes.add(refeicao);
         }
 
-        return cardapios;
+        return refeicoes;
 
     }
-}
+    
+
+ }
+    
+ 
+

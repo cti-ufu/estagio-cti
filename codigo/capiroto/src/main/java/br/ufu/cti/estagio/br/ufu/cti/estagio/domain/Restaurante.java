@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.persistence.*;
 
-
-
 /**
  * Created by diego on 05/04/16.
  */
@@ -17,17 +15,27 @@ public class Restaurante {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idRestaurante;
+    
     private String nomeRestaurante;
     private String enderecoRestaurante;
     
-    @ManyToMany(mappedBy = "restaurantes")
-    private List<Refeicao> refeicoes; 
+    @OneToMany(fetch=FetchType.LAZY, mappedBy = "restaurante")
+    private List<TipoRefeicao> tiposRefeicoes ;
     
-    public Restaurante (){
+  
 
-    }
+    public List<TipoRefeicao> getTiposRefeicoes() {
+		return tiposRefeicoes;
+	}
 
-    public Restaurante(String nomeRestaurante, String enderecoRestaurante) {
+	public void setTiposRefeicoes(List<TipoRefeicao> tiposRefeicoes) {
+		this.tiposRefeicoes = tiposRefeicoes;
+	}
+	
+	public Restaurante(){
+		
+	}
+	public Restaurante(String nomeRestaurante, String enderecoRestaurante) {
         this.enderecoRestaurante = enderecoRestaurante;
         this.nomeRestaurante = nomeRestaurante;
     }
