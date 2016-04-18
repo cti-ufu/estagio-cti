@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: capiroto
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: br.ufu.cti.estagio
+Build-Jdk: 1.7.0_80-ea
+Built-By: leticia
+Created-By: Maven Integration for Eclipse
+

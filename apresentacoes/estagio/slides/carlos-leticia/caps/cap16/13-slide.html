@@ -1,0 +1,21 @@
+<div align="left"><h4><font face="Georgia"  color="#87CEFF">Como um HashSte procura duplicatas: hashCode e eguals()  </font></h4></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">.Usará o valor do código hashing do objeto para determinar onde inseri-lo no conjunto.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. Comparará o códiǵo com todos os outros objetos.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5">. Deve-se sobrepor hashCode() para assegurar que os objetos tenham o mesmo valor.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5">. O método add() de hashSet retorna um booleano para informar se o novo objeto foi adicionado.</font></div>
+<font face="Georgia" size="5,5">
+<pre><code> 
+	class Song implements Comparable< Song >{
+		String title;
+		String artist;
+		String bpm;
+		<b>public boolean equals(Objetct aSong){    <font color="blue"> //O HashSet envia para o método outro objeto Song.</font>
+			Songs = (Song) a Song;
+			return getTile() .equals( s.getTitle());   <font color="blue"> //Strings tem o método equals() sobreposto.</font>
+		}
+
+		public int hashCode() {
+			return title.hashCode();       
+		}</b>
+	}
+		</code></pre>	

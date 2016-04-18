@@ -7,15 +7,11 @@ import org.junit.Test;
 public class ExemploDeTeste {
 
 	@Test
-<<<<<<< HEAD
+
 	public void test(){
 		
 		fail("Not yet implemented");
-		
-=======
-	public void test() {
-		fail("Not yet implemented");
->>>>>>> cap789
-	}
 
+	}
+	
 }

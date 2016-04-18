@@ -1,0 +1,23 @@
+<pre>
+	<code data-trim data-noescape>
+//Fazer uma conexão de Socket com o servidor
+
+	Socket chatSocket = new Socket(“127.0.0.1”, 5000);
+
+//127.0.0.1 é um endereço IP utilizado para “localhost”, ou seja, é onde o código estará “rodando”.
+//Você pode usar este endereço IP quando for testar o seu cliente e servidor na mesma máquina.
+//5000 é a porta TCP
+
+//Criar um InputStreamReader encadeado ao fluxo de entrada (conexão) do nível inferior do soquete.
+
+	InputStreamReader stream = new InputStreamReader(chatSocket.getInputStream());
+
+//InputStreamReader é uma “ponte” de fluxo que pega os bytes e converte eles para dados textuais (caracteres). Ele é usado principalmente para agir como um meio de encadeamento entre o BufferedReader de alto nível e o fluxo de entrada Socket de baixo nível.
+//Nele pedirá um fluxo de entrada ao soquete(chatSocket) de nível inferior.
+
+//Faça um BufferedReader e leia
+
+	BufferedReader reader = new BufferedReader(stream); //Encadeira o BufferedReader ao InputStreamReader
+	String message = reader.readline();
+    </code>
+</pre>

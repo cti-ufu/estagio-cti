@@ -1,0 +1,14 @@
+<div align="left"><font face="Georgia" size="30" color="#87CEFF">Método <i>compareTo( )</i></font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. Ele retornará um número negativo, zero ou um inteiro positivo.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O método será chamado em um objeto, passando para ele a referência de um objeto diferente.</font></div>
+<div align="left"><font face="Georgia" color="white" size="5,5">. O objeto que estiver executando o método, terá que descobrir se o objeto que foi passado deve ser inserido acima, abaixo ou no mesmo local da lista.</font></div>
+<pre><code>class <b>song implements Comparable< Song > </b>{
+	String title;
+	String artist;
+	String rating;
+	String bpm;
+	<b>public int compareTo(Song s) {
+		return title.compareTo(s.getTitle());
+	}</b>
+}
+</code></pre>
