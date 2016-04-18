@@ -42,4 +42,6 @@ public class RestauranteRest {
     	restauranteDAO.save(new Restaurante(nomeRestaurante, enderecoRestaurante));
 
     }
+   
+    
 }

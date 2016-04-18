@@ -1,7 +1,8 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
 
 
-import java.util.Date;
+import java.util.Calendar;
+
 import java.util.List;
 
 import javax.persistence.*;
@@ -14,7 +15,7 @@ import javax.persistence.*;
 	    @Id
 	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    private Integer idRefeicao;
-	    private Date data;
+	    private Calendar data;
 	    
 	    @ManyToOne(fetch = FetchType.LAZY)
 		@JoinColumn(name = "idTipoRefeicao", nullable = false)
@@ -37,13 +38,7 @@ import javax.persistence.*;
 		}
 
 				
-		public Date getData() {
-			return data;
-		}
-
-		public void setData(Date data) {
-			this.data = data;
-		}
+	
 
 		public List<ItemRefeicao> getItensRefeicoes() {
 			return itensRefeicoes;
