@@ -12,6 +12,9 @@ import javax.persistence.*;
 @Table(name = "RESTAURANTE")
 public class Restaurante {
 
+	/**
+	 * Tabelas
+	 */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idRestaurante;
@@ -20,25 +23,14 @@ public class Restaurante {
     private String enderecoRestaurante;
     
     @OneToMany(fetch=FetchType.LAZY, mappedBy = "restaurante")
-    private List<TipoRefeicao> tiposRefeicoes ;
+    private List<RestauranteTemRefeicao> restaurantesTemRefeicoes ;
+    
     
   
-
-    public List<TipoRefeicao> getTiposRefeicoes() {
-		return tiposRefeicoes;
-	}
-
-	public void setTiposRefeicoes(List<TipoRefeicao> tiposRefeicoes) {
-		this.tiposRefeicoes = tiposRefeicoes;
-	}
-	
-	public Restaurante(){
-		
-	}
-	public Restaurante(String nomeRestaurante, String enderecoRestaurante) {
-        this.enderecoRestaurante = enderecoRestaurante;
-        this.nomeRestaurante = nomeRestaurante;
-    }
+    /**
+     * Get's e Set's
+     */
+   
 
     public String getEnderecoRestaurante() {
         return enderecoRestaurante;
@@ -64,6 +56,16 @@ public class Restaurante {
         this.nomeRestaurante = nomeRestaurante;
     }
 
+    /**
+     * Construtores
+     */
+	public Restaurante(){
+		
+	}
+	public Restaurante(String nomeRestaurante, String enderecoRestaurante) {
+        this.enderecoRestaurante = enderecoRestaurante;
+        this.nomeRestaurante = nomeRestaurante;
+    }
 
     @Override
     public String toString() {

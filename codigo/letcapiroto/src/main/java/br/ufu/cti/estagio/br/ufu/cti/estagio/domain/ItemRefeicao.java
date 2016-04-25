@@ -7,26 +7,21 @@ import javax.persistence.*;
 @Entity
 @Table(name = "ITEMREFEICAO")
 public class ItemRefeicao {
+	  
 	
+	/**
+     * tabelas
+     */
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idItemRefeicao;
 	private String descricao;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idRefeicao", nullable = false)
-	private Refeicao refeicao;
+	@OneToMany(fetch=FetchType.LAZY, mappedBy = "itemRefeicao")
+    private List <RefeicaoTemItemRefeicao> refeicoesTemItensRefeicoes;
 	
-	@OneToOne(mappedBy="itemRefeicao")
-	private TipoItemRefeicao tipoItemRefeicao;
-	
-	
-	
-	
-	public ItemRefeicao() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	@OneToMany(fetch=FetchType.LAZY, mappedBy = "itemRefeicao")
+    private List <TipoItemRefeicao> TiposItensRefeicoes;
 
 	public Integer getIdItemRefeicao() {
 		return idItemRefeicao;
@@ -44,22 +39,36 @@ public class ItemRefeicao {
 		this.descricao = descricao;
 	}
 
-	public TipoItemRefeicao getTipoItemRefeicao() {
-		return tipoItemRefeicao;
+	public List<RefeicaoTemItemRefeicao> getRefeicoesTemItensRefeicoes() {
+		return refeicoesTemItensRefeicoes;
 	}
 
-	public void setTipoItemRefeicao(TipoItemRefeicao tipoItemRefeicao) {
-		this.tipoItemRefeicao = tipoItemRefeicao;
+	public void setRefeicoesTemItensRefeicoes(List<RefeicaoTemItemRefeicao> refeicoesTemItensRefeicoes) {
+		this.refeicoesTemItensRefeicoes = refeicoesTemItensRefeicoes;
 	}
 
-	public Refeicao getRefeicao() {
-		return refeicao;
+	
+	public List<TipoItemRefeicao> getTiposItensRefeicoes() {
+		return TiposItensRefeicoes;
 	}
 
-	public void setRefeicao(Refeicao refeicao) {
-		this.refeicao = refeicao;
+	public void setTiposItensRefeicoes(List<TipoItemRefeicao> tiposItensRefeicoes) {
+		TiposItensRefeicoes = tiposItensRefeicoes;
+	}
+    
+	
+	public ItemRefeicao(String descricao, List<RefeicaoTemItemRefeicao> refeicoesTemItensRefeicoes) {
+		super();
+		this.descricao = descricao;
+		this.refeicoesTemItensRefeicoes = refeicoesTemItensRefeicoes;
 	}
 
+	@Override
+	public String toString() {
+		return "ItemRefeicao [idItemRefeicao=" + idItemRefeicao + ", descricao=" + descricao
+				+ ", refeicoesTemItensRefeicoes=" + refeicoesTemItensRefeicoes + ", TiposItensRefeicoes="
+				+ TiposItensRefeicoes + "]";
+	}
 	
 
 	

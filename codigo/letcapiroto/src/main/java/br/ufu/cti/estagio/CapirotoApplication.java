@@ -1,7 +1,8 @@
 package br.ufu.cti.estagio;
 
-import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteDAO;
-import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
+
+import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.*;
+import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.*;
 import org.h2.server.web.WebServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,8 +41,8 @@ public class CapirotoApplication {
 
 				repository.save(new Restaurante("Umuarama", "Campus Umuarama"));
 				repository.save(new Restaurante("STMonica", "Campus Santa Monica"));
-				
-				
+					
+							
 
 				// fetch all customers
 				log.info(" Buscando restaurantes com findAll():");
@@ -54,8 +55,7 @@ public class CapirotoApplication {
 
 		return commandLineRunner;
 	}
-
-
+	
 
 
 

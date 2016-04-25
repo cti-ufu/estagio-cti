@@ -1,7 +1,4 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
-
-
-
 import javax.persistence.*;
 
 
@@ -9,17 +6,24 @@ import javax.persistence.*;
 @Table(name = "TIPOITEMREFEICAO")
 public class TipoItemRefeicao {
 	
+	  /**
+     * tabelas
+     */
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idTipoItemRefeicao;
 	
-	@OneToOne(fetch = FetchType.LAZY)
-	@PrimaryKeyJoinColumn
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idItemRefeicao", nullable = false)
 	private ItemRefeicao itemRefeicao;
 	
 	
 	private String descricao;
 	
+	
+	  /**
+     * construtor
+     */
 	public TipoItemRefeicao(){
 		
 	}
@@ -28,7 +32,10 @@ public class TipoItemRefeicao {
 		super();
 		this.descricao = descricao;
 	}
-
+	
+	  /**
+     * Get's e Set's
+     */
 	public Integer getIdTipoItemRefeicao() {
 		return idTipoItemRefeicao;
 	}
@@ -51,6 +58,12 @@ public class TipoItemRefeicao {
 
 	public void setItemRefeicao(ItemRefeicao itemRefeicao) {
 		this.itemRefeicao = itemRefeicao;
+	}
+
+	@Override
+	public String toString() {
+		return "TipoItemRefeicao [idTipoItemRefeicao=" + idTipoItemRefeicao + ", itemRefeicao=" + itemRefeicao
+				+ ", descricao=" + descricao + "]";
 	}
 
 	

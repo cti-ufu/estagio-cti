@@ -18,7 +18,8 @@ public class RefeicaoRest {
     RefeicaoDAO refeicaoDAO;
 	
     @RequestMapping("/buscarCardapioRestaurante")
-    public List<Refeicao> buscarCardapioRestaurante () {
+        
+   public List<Refeicao> buscarCardapioRestaurante () {
     	
         List<Refeicao> refeicoes = new ArrayList<>();
 
@@ -29,7 +30,7 @@ public class RefeicaoRest {
         return refeicoes;
 
     }
-   
+    
     
 
  }

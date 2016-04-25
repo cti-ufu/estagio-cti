@@ -28,11 +28,9 @@ public class CapirotoApplicationTests {
 		for (Restaurante restaurante : restauranteDAO.findAll()) {
 			assertNotNull(restaurante);
 		}
-			//asdf
+			
 		
-		for (Refeicao refeicao : refeicaoDAO.findAll()){
-			assertNotNull(refeicao);
-		}
+		
 	}
 
 
