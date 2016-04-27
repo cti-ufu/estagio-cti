@@ -20,8 +20,9 @@ public class ItemRefeicao {
 	@OneToMany(fetch=FetchType.LAZY, mappedBy = "itemRefeicao")
     private List <RefeicaoTemItemRefeicao> refeicoesTemItensRefeicoes;
 	
-	@OneToMany(fetch=FetchType.LAZY, mappedBy = "itemRefeicao")
-    private List <TipoItemRefeicao> TiposItensRefeicoes;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idTipoItemRefeicao", nullable = false)
+	private TipoItemRefeicao tipoItemRefeicao;
 
 	public Integer getIdItemRefeicao() {
 		return idItemRefeicao;
@@ -48,14 +49,6 @@ public class ItemRefeicao {
 	}
 
 	
-	public List<TipoItemRefeicao> getTiposItensRefeicoes() {
-		return TiposItensRefeicoes;
-	}
-
-	public void setTiposItensRefeicoes(List<TipoItemRefeicao> tiposItensRefeicoes) {
-		TiposItensRefeicoes = tiposItensRefeicoes;
-	}
-    
 	
 	public ItemRefeicao(String descricao, List<RefeicaoTemItemRefeicao> refeicoesTemItensRefeicoes) {
 		super();
@@ -63,12 +56,6 @@ public class ItemRefeicao {
 		this.refeicoesTemItensRefeicoes = refeicoesTemItensRefeicoes;
 	}
 
-	@Override
-	public String toString() {
-		return "ItemRefeicao [idItemRefeicao=" + idItemRefeicao + ", descricao=" + descricao
-				+ ", refeicoesTemItensRefeicoes=" + refeicoesTemItensRefeicoes + ", TiposItensRefeicoes="
-				+ TiposItensRefeicoes + "]";
-	}
 	
 
 	

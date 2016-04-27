@@ -42,37 +42,12 @@ import javax.persistence.*;
 			this.nome = nome;
 		}
 
-		public List<RestauranteTemRefeicao> getRestaurantesTemRefeicoes() {
-			return restaurantesTemRefeicoes;
-		}
+		
 
-		public void setRestaurantesTemRefeicoes(List<RestauranteTemRefeicao> restaurantesTemRefeicoes) {
-			this.restaurantesTemRefeicoes = restaurantesTemRefeicoes;
-		}
-
-		public List<RefeicaoTemItemRefeicao> getRefeicoesTemItensRefeicoes() {
-			return refeicoesTemItensRefeicoes;
-		}
-
-		public void setRefeicoesTemItensRefeicoes(List<RefeicaoTemItemRefeicao> refeicoesTemItensRefeicoes) {
-			this.refeicoesTemItensRefeicoes = refeicoesTemItensRefeicoes;
-		}
-
-		public DataRefeicao getDataRefeicao() {
-			return dataRefeicao;
-		}
-
-		public void setDataRefeicao(DataRefeicao dataRefeicao) {
-			this.dataRefeicao = dataRefeicao;
-		}
-
-		public Refeicao(String nome, List<RestauranteTemRefeicao> restaurantesTemRefeicoes,
-				List<RefeicaoTemItemRefeicao> refeicoesTemItensRefeicoes, DataRefeicao dataRefeicao) {
+		public Refeicao(String nome) {
 			super();
 			this.nome = nome;
-			this.restaurantesTemRefeicoes = restaurantesTemRefeicoes;
-			this.refeicoesTemItensRefeicoes = refeicoesTemItensRefeicoes;
-			this.dataRefeicao = dataRefeicao;
+			
 		}
 
 		@Override

@@ -1,4 +1,6 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
+import java.util.List;
+
 import javax.persistence.*;
 
 
@@ -13,10 +15,9 @@ public class TipoItemRefeicao {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idTipoItemRefeicao;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idItemRefeicao", nullable = false)
-	private ItemRefeicao itemRefeicao;
 	
+	@OneToMany(fetch=FetchType.LAZY, mappedBy = "tipoItemRefeicao")
+    private List <ItemRefeicao> itensRefeicoes;
 	
 	private String descricao;
 	
@@ -52,19 +53,15 @@ public class TipoItemRefeicao {
 		this.descricao = descricao;
 	}
 
-	public ItemRefeicao getItemRefeicao() {
-		return itemRefeicao;
-	}
-
-	public void setItemRefeicao(ItemRefeicao itemRefeicao) {
-		this.itemRefeicao = itemRefeicao;
-	}
-
 	@Override
 	public String toString() {
-		return "TipoItemRefeicao [idTipoItemRefeicao=" + idTipoItemRefeicao + ", itemRefeicao=" + itemRefeicao
+		return "TipoItemRefeicao [idTipoItemRefeicao=" + idTipoItemRefeicao + ", itensRefeicoes=" + itensRefeicoes
 				+ ", descricao=" + descricao + "]";
 	}
+
+	
+	
+
 
 	
 }

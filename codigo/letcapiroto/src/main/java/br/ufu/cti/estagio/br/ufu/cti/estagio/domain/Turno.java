@@ -1,5 +1,6 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
 import java.time.Instant;
+import java.time.LocalTime;
 
 import javax.persistence.*;
 
@@ -14,42 +15,44 @@ import javax.persistence.*;
 	    @GeneratedValue(strategy = GenerationType.AUTO)
 	    private Integer idTurno;
 	    
-	    private Instant horaInicio;
-	    private Instant horaFim;
-	    
+	    private Instant hora = Instant.now();
+	    private LocalTime horaInicio;
+	    private LocalTime horaFim;
 	    private String nome;
 	    
 	    @ManyToOne(fetch = FetchType.LAZY)
 		@JoinColumn(name = "idDataRefeicao", nullable = false)
 	    private DataRefeicao dataRefeicao;
-	    
-	    
-	    
-	    
-	    public Turno(){
-	    }
 
 		public Integer getIdTurno() {
 			return idTurno;
 		}
 
-		public void setIdTuno(Integer idTurno) {
+		public void setIdTurno(Integer idTurno) {
 			this.idTurno = idTurno;
 		}
 
-		public Instant getHoraInicio() {
+		public Instant getHora() {
+			return hora;
+		}
+
+		public void setHora(Instant hora) {
+			this.hora = hora;
+		}
+
+		public LocalTime getHoraInicio() {
 			return horaInicio;
 		}
 
-		public void setHoraInicio(Instant horaInicio) {
+		public void setHoraInicio(LocalTime horaInicio) {
 			this.horaInicio = horaInicio;
 		}
 
-		public Instant getHoraFim() {
+		public LocalTime getHoraFim() {
 			return horaFim;
 		}
 
-		public void setHoraFim(Instant horaFim) {
+		public void setHoraFim(LocalTime horaFim) {
 			this.horaFim = horaFim;
 		}
 
@@ -60,22 +63,33 @@ import javax.persistence.*;
 		public void setNome(String nome) {
 			this.nome = nome;
 		}
-		
-		
-		
-		public Turno( Instant horaInicio, Instant horaFim, String nome) {
-			
+
+		public DataRefeicao getDataRefeicao() {
+			return dataRefeicao;
+		}
+
+		public void setDataRefeicao(DataRefeicao dataRefeicao) {
+			this.dataRefeicao = dataRefeicao;
+		}
+
+		public Turno(LocalTime horaInicio, LocalTime horaFim, String nome) {
+			super();
 			
 			this.horaInicio = horaInicio;
 			this.horaFim = horaFim;
 			this.nome = nome;
+			
 		}
 
 		@Override
 		public String toString() {
-			return "Turno [idTurno=" + idTurno + ", horaInicio=" + horaInicio + ", horaFim=" + horaFim + ", nome=" + nome
-					+ "]";
+			return "Turno [idTurno=" + idTurno + ", hora=" + hora + ", horaInicio=" + horaInicio + ", horaFim="
+					+ horaFim + ", nome=" + nome + ", dataRefeicao=" + dataRefeicao + "]";
 		}
+   	    
+	    
+	    	    
+	    
 
 
 		
