@@ -1,5 +1,6 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.rest;
 
+import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RefeicaoDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Refeicao;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
@@ -22,6 +23,9 @@ public class RestauranteRest {
 
     @Autowired
     RestauranteDAO restauranteDAO;
+    
+    @Autowired
+    RefeicaoDAO refeicaoDAO;
 
     @RequestMapping("/buscarTodosRestaurantes")
     public List<Restaurante> buscarTodosRestaurantes () {
@@ -44,18 +48,18 @@ public class RestauranteRest {
 
     }
     
-    /*
+    
     @RequestMapping("/buscarCardapioRestaurante/{idRestaurante}")
     public List<Refeicao> buscarCardapioRestaurante (@PathVariable("idRestaurante") Integer idRestaurante) {
 
         List<Refeicao> refeicoes = new ArrayList<>();
 
-        for (Refeicao refeicoes : restauranteDAO.findAll()) {
-            if(restaurante.getIdRestaurante() == )
+        for (Refeicao refeicao : refeicaoDAO.findAll()) {
+            if( == restauranteDAO.getOne(idRestaurante))
         }
 
         return refeicoes;
 
     }
-    */
+    
 }

@@ -14,7 +14,6 @@ public class TipoItemRefeicao {
     private Integer idTipoItemRefeicao;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy="tipoItemRefeicao")
-	@PrimaryKeyJoinColumn
 	private List<ItemRefeicao> itemsRefeicao;
 	
 	
