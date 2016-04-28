@@ -2,13 +2,17 @@ package br.ufu.cti.estagio.br.ufu.cti.estagio.rest;
 
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RefeicaoDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteDAO;
+import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteTemRefDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Refeicao;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
+import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.RestauranteTemRef;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.jpa.repository.*;
 
 
 import java.util.ArrayList;
@@ -26,6 +30,9 @@ public class RestauranteRest {
     
     @Autowired
     RefeicaoDAO refeicaoDAO;
+    
+    @Autowired
+    RestauranteTemRefDAO restauranteTemRefDAO;
 
     @RequestMapping("/buscarTodosRestaurantes")
     public List<Restaurante> buscarTodosRestaurantes () {
@@ -55,7 +62,19 @@ public class RestauranteRest {
         List<Refeicao> refeicoes = new ArrayList<>();
 
         for (Refeicao refeicao : refeicaoDAO.findAll()) {
-            if( == restauranteDAO.getOne(idRestaurante))
+        	
+        	List<RestauranteTemRef> RestauranteTemRefs = new ArrayList<>();
+        	
+        	for(RestauranteTemRef restTemRef : restauranteTemRefDAO.findAll()) {
+        		
+        		Restaurante restaurante = restauranteDAO.getOne(idRestaurante);
+        		
+        		if(idRestaurante == restTemRef.getRestaurante().getIdRestaurante()) {
+        			refeicoes.add(refeicao);
+        		}
+        		
+        	}
+        	
         }
 
         return refeicoes;
