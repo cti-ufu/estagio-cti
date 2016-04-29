@@ -59,7 +59,9 @@ public class RestauranteRest {
     @RequestMapping("/buscarCardapioRestaurante/{idRestaurante}")
     public List<Refeicao> buscarCardapioRestaurante (@PathVariable("idRestaurante") Integer idRestaurante) {
 
-        List<Refeicao> refeicoes = new ArrayList<>();
+    	Restaurante restaurante = restauranteDAO.getOne(idRestaurante);
+    	
+        /*List<Refeicao> refeicoes = new ArrayList<>();
 
         for (Refeicao refeicao : refeicaoDAO.findAll()) {
         	
@@ -75,8 +77,8 @@ public class RestauranteRest {
         		
         	}
         	
-        }
-
+        }*/
+    	
         return refeicoes;
 
     }

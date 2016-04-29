@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.*;
 /**
  * Created by diego on 05/04/16.
  */
-public interface RestauranteDAO extends CrudRepository <Restaurante , Integer>{
+public interface RestauranteDAO extends JpaRepository <Restaurante , Integer>{
 
 }
