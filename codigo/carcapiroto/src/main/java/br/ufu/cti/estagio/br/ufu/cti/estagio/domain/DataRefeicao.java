@@ -1,6 +1,8 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
 
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -15,11 +17,13 @@ import javax.persistence.Table;
 @Table(name = "DATA_REFEICAO")
 public class DataRefeicao {
 
+	final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer idDatRefeicao;
 	
-	private Instant data;
+	private LocalDate data;
 	
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="dataRefeicao")
     private List<Refeicao> refeicoes;
@@ -27,8 +31,9 @@ public class DataRefeicao {
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="dataRefeicao")
 	private List<Turno> turnos;
 	
-	public DataRefeicao(Instant data) {
-		this.data = data;
+	public DataRefeicao(String data) {
+		
+		this.data = LocalDate.parse(data,DATE_FORMAT);
 	}
 
 	public Integer getIdDatRefeicao() {
@@ -39,12 +44,12 @@ public class DataRefeicao {
 		this.idDatRefeicao = idDatRefeicao;
 	}
 
-	public Instant getData() {
+	public LocalDate getData() {
 		return data;
 	}
 
-	public void setData(Instant data) {
-		this.data = data;
+	public void setData(String data) {
+		this.data = LocalDate.parse(data,DATE_FORMAT);
 	}
 
 	public List<Refeicao> getRefeicoes() {
@@ -65,7 +70,7 @@ public class DataRefeicao {
 
 	@Override
 	public String toString() {
-		return "DataRefeicao [idDatRefeicao=" + idDatRefeicao + ", data=" + data + ", refeicoes=" + refeicoes
+		return "DataRefeicao [idDatRefeicao=" + idDatRefeicao + ", data=" + data.getDayOfWeek() + ", " + data + ", refeicoes=" + refeicoes
 				+ ", turnos=" + turnos + "]";
 	}
 	

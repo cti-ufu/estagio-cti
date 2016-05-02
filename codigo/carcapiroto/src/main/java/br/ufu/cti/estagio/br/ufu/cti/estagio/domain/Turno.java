@@ -1,6 +1,8 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.domain;
 
 import java.time.Instant;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,22 +17,24 @@ import javax.persistence.Table;
 @Table(name = "TURNO")
 public class Turno {
 
+	final DateTimeFormatter TIME_FORMAT = DateTimeFormatter.ofPattern("HH:mm");
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer idTurno;
 	
-	private Instant horaInicio;
-	private Instant horaFim;
+	private LocalTime horaInicio;
+	private LocalTime horaFim;
 	private String nome;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idDataRefeicao", nullable = false)
 	private DataRefeicao dataRefeicao;
 	
-	public Turno(Instant horaInicio, Instant horaFim, String nome) {
+	public Turno(String horaInicio, String horaFim, String nome) {
 		super();
-		this.horaInicio = horaInicio;
-		this.horaFim = horaFim;
+		this.horaInicio = LocalTime.parse(horaInicio,TIME_FORMAT);
+		this.horaFim = LocalTime.parse(horaFim,TIME_FORMAT);
 		this.nome = nome;
 	}
 	
@@ -40,17 +44,17 @@ public class Turno {
 	public void setIdTurno(Integer idTurno) {
 		this.idTurno = idTurno;
 	}
-	public Instant getHoraInicio() {
+	public LocalTime getHoraInicio() {
 		return horaInicio;
 	}
-	public void setHoraInicio(Instant horaInicio) {
-		this.horaInicio = horaInicio;
+	public void setHoraInicio(String horaInicio) {
+		this.horaInicio = LocalTime.parse(horaInicio,TIME_FORMAT);
 	}
-	public Instant getHoraFim() {
+	public LocalTime getHoraFim() {
 		return horaFim;
 	}
-	public void setHoraFim(Instant horaFim) {
-		this.horaFim = horaFim;
+	public void setHoraFim(String horaFim) {
+		this.horaFim = LocalTime.parse(horaFim,TIME_FORMAT);
 	}
 	public String getNome() {
 		return nome;

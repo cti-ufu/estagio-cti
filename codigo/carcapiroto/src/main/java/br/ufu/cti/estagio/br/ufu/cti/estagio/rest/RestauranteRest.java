@@ -57,9 +57,34 @@ public class RestauranteRest {
     
     
     @RequestMapping("/buscarCardapioRestaurante/{idRestaurante}")
-    public List<Refeicao> buscarCardapioRestaurante (@PathVariable("idRestaurante") Integer idRestaurante) {
+    public List<RestauranteTemRef> buscarCardapioRestaurante (@PathVariable("idRestaurante") Integer idRestaurante) {
 
+    	List<RestauranteTemRef> restauranteTemRefs = new ArrayList<>();
+    	
+    	for(RestauranteTemRef restTemRef : restauranteTemRefDAO.findAll()) {
+    		
+    		if(restTemRef.getRestaurante().getIdRestaurante() == idRestaurante) {
+    			restauranteTemRefs.add(restTemRef);
+    		}
+    		
+    	}
+    	
+    	return restauranteTemRefs;
+    	
+    	/*
     	Restaurante restaurante = restauranteDAO.getOne(idRestaurante);
+    	
+    	for(RestauranteTemRef restTemRef : restauranteTemRefDAO.findAll()) {
+    		
+    		if(idRestaurante == restTemRef.getRestaurante().getIdRestaurante()) {
+    			refeicoes.add(refeicao);
+    		}
+    		
+    	}
+    	
+    	if(idRestaurante == restTemRef.getRestaurante().getIdRestaurante()) {
+			refeicoes.add(refeicao);
+		}
     	
         /*List<Refeicao> refeicoes = new ArrayList<>();
 
@@ -78,8 +103,6 @@ public class RestauranteRest {
         	}
         	
         }*/
-    	
-        return refeicoes;
 
     }
     
