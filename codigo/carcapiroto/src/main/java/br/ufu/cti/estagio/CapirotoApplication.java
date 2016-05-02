@@ -13,6 +13,8 @@ import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.TipoItemRefeicao;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Turno;
 
+import java.util.Iterator;
+
 import org.h2.server.web.WebServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -144,7 +146,7 @@ public class CapirotoApplication {
 		CommandLineRunner commandLineRunner = new CommandLineRunner() {
 			@Override
 			public void run(String... strings) throws Exception {
-
+				
 
 				repository.save(new TipoItemRefeicao("Prato Principal"));
 				repository.save(new TipoItemRefeicao("Prato Vegetariano"));
@@ -162,17 +164,24 @@ public class CapirotoApplication {
 		return commandLineRunner;
 	}
 	
-	public CommandLineRunner dadosItemRefeicao(final ItemRefeicaoDAO repository) {
+	public CommandLineRunner dadosItemRefeicao(final ItemRefeicaoDAO repository , final TipoItemRefeicaoDAO repositoryItemRefeicao) {
 
 		CommandLineRunner commandLineRunner = new CommandLineRunner() {
 			@Override
 			public void run(String... strings) throws Exception {
 
-
-				repository.save(new ItemRefeicao("Filé de frango grelhado"));
-				repository.save(new ItemRefeicao("Estrogonofe bovino"));
-				repository.save(new ItemRefeicao("Omelete de forno"));
-				repository.save(new ItemRefeicao("Estrogonofe vegetariano"));
+				/*Iterable<TipoItemRefeicao> iterable = repositoryItemRefeicao.findAll();
+				Iterator<TipoItemRefeicao> it = iterable.iterator();
+				
+				TipoItemRefeicao tipoItemRefeicao = it.next();
+				*/
+				
+				Iterable<TipoItemRefeicao> iterable = repositoryItemRefeicao.getOne()
+				
+				repository.save(new ItemRefeicao("Filé de frango grelhado", tipoItemRefeicao));
+				repository.save(new ItemRefeicao("Estrogonofe bovino", tipoItemRefeicao));
+				repository.save(new ItemRefeicao("Omelete de forno", tipoItemRefeicao));
+				repository.save(new ItemRefeicao("Estrogonofe vegetariano", tipoItemRefeicao));
 				
 
 				// fetch all customers

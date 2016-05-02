@@ -21,10 +21,11 @@ public class ItemRefeicao {
 	@JoinColumn(name = "idTipoItemRefeicao", nullable = false)
     private TipoItemRefeicao tipoItemRefeicao;
 		
-	public ItemRefeicao(String descricao) {
+	public ItemRefeicao(String descricao, TipoItemRefeicao tipoItemRefeicao) {
 		super();
 		// TODO Auto-generated constructor stub
 		this.descricao = descricao;
+		this.tipoItemRefeicao = tipoItemRefeicao;
 	}
 
 	public Integer getIdItemRefeicao() {
