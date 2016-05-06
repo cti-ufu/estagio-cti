@@ -1,7 +1,10 @@
 package br.ufu.cti.estagio.br.ufu.cti.estagio.rest;
 
+import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RefeicaoDAO;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.br.ufu.cti.estagio.dao.RestauranteDAO;
+import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Refeicao;
 import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.Restaurante;
+import br.ufu.cti.estagio.br.ufu.cti.estagio.domain.RestauranteTemRefeicao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.List;
 
 /**
@@ -21,7 +24,8 @@ public class RestauranteRest {
 
     @Autowired
     RestauranteDAO restauranteDAO;
-
+  
+    
     @RequestMapping("/buscarTodosRestaurantes")
     public List<Restaurante> buscarTodosRestaurantes () {
 
@@ -42,6 +46,7 @@ public class RestauranteRest {
     	restauranteDAO.save(new Restaurante(nomeRestaurante, enderecoRestaurante));
 
     }
+  
     
    
     

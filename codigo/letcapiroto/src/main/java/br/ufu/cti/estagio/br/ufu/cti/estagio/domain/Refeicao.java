@@ -56,10 +56,10 @@ import javax.persistence.*;
 					+ restaurantesTemRefeicoes + ", refeicoesTemItensRefeicoes=" + refeicoesTemItensRefeicoes
 					+ ", dataRefeicao=" + dataRefeicao + "]";
 		}
-	    
-	    
-	    
-	 
+
+		
+
+
 		
 
 		
